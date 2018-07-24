@@ -2,6 +2,7 @@
 <meta charset="utf-8">
 <head>
 <title>Final</title>
+<link rel="stylesheet" typle="text/css" href="style.css">
 </head>
 <body>
     <script src="//d3js.org/d3.v4.min.js"></script>
@@ -9,18 +10,219 @@
         Start of project.
     </p>
 
-    <p>
-        <svg width="800" height="600"></svg>
-    </p>
-
     <script>
-        d3.csv("data/birth_order.csv", function(data) {
+    /*    d3.csv("data/birth_order.csv", function(data) {
             for (var i = 0; i < data.length; i++) {
-                console.log(data[i]);
-                //console.log(data[i].Year);
+                //console.log(data[i]);
+                console.log(data[i].Births);
+                console.log(data[i].Year);
             }
         });
-        </script>
+
+        d3.csv("data/birth_order.csv", function(data) {
+            for (var i = 0; i < data.length; i++) {
+                return data[i];
+            }
+        });
+
+        d3.csv("data/birth_order.csv")
+            .get(function(data) {
+                var height = 400;
+                var width = 600;
+
+                //function filterCriteria(data) {
+                //    return data.Order === "1st";
+                //}
+
+                //var data2 = filterCriteria(data);
+                
+
+                var minDate = d3.min(data,function(d){ return d.Year; });
+                var maxDate = d3.max(data,function(d){ return d.Year; });
+                var minBirths = 0;
+                var maxBirths = d3.max(data,function(d){ return d.Births; });
+                console.log(minDate);
+                console.log(maxDate);
+                console.log(maxBirths);
+
+                var y = d3.scaleLinear()
+                    .domain([0,maxBirths])
+                    .range([height,0]);
+                var x = d3.scaleLinear()
+                    .domain([minDate,maxDate])
+                    .range([0,width]);
+
+                var yAxis = d3.axisLeft(y);
+                var xAxis = d3.axisBottom(x);
+
+                var svg = d3.select('body').append('svg')
+                        .attr('height','100%')
+                        .attr('width','100%');
+
+                var chartGroup = svg.append('g')
+                    .attr('transform','translate(50,50)');
+
+                var line = d3.line()
+                    .x(function(d){ return x(d.Year);})
+                    .y(function(d){ return y(d.Births);});
+
+                chartGroup.append('path').attr('d',line(data));
+                chartGroup.append('g').attr('class','x axis').attr('transform','translate(0, '+height+')').call(xAxis);
+                chartGroup.append('g').attr('class','y axis').call(yAxis);
+            });
+    */
+
+    // https://bl.ocks.org/benlcollins/2d7fb36cd0c295c00882
+    // basic SVG setup
+	var margin = { top: 20, right: 100, bottom: 40, left: 100 };
+	var height = 500 - margin.top - margin.bottom;
+	var width = 960 - margin.left - margin.right;
+
+    var svg = d3.select("body").append("svg")
+			.attr("width",width + margin.left + margin.right)
+			.attr("height",height + margin.top + margin.bottom)
+		.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // setup scales - the domain is specified inside of the function called when we load the data
+	//var xScale = d3.time.scale().range([0, width]);
+    var xScale = d3.scaleLinear().range([0, width]);
+	var yScale = d3.scaleLinear().range([height, 0]);
+	var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+	// setup the axes
+	//var xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+	//var yAxis = d3.svg.axis().scale(yScale).orient("left");
+    var yAxis = d3.axisLeft(yScale);
+    var xAxis = d3.axisBottom(xScale);
+
+    // set the line attributes
+	//var line = d3.svg.line()
+	//	.interpolate("basis")
+	//	.x(function(d) { return xScale(d.date); })
+	//	.y(function(d) { return yScale(d.close); });
+    var line = d3.line()
+		.x(function(d) { return xScale(d.Year); })
+		.y(function(d) { return yScale(d.Births); })
+        .curve(d3.curveBasis);
+
+	var focus = svg.append("g").style("display","none");
+
+    // import data and create chart
+    d3.csv("data/birth_order.csv", function(d){
+        return {
+            Year: +d.Year,
+            Order: +d.Order,
+            Change: +d.Change,
+            Births: +d.births
+        };
+    },
+    function(error, data) {
+        // sort data ascending
+        data.sort(function(a,b) {
+           return a.Year - b.Year;
+        });
+        // color domain
+			color.domain(d3.keys(data[0]).filter(function(key) { return key !== "Order"; }));
+
+        // create Order array with object for each birth order containing all data
+			var orders = color.domain().map(function(name) {
+				return {
+					name: name,
+					values: data.map(function(d){
+						return { Year: d.Year, Births: d.Order };
+					})
+				};
+			});
+
+            // add domain ranges to the x and y scales
+			xScale.domain([
+				d3.min(orders, function(c) { return d3.min(c.values, function(v) { return v.Year; }); }),
+				d3.max(orders, function(c) { return d3.max(c.values, function(v) { return v.Year; }); })
+			]);
+			yScale.domain([
+				0,
+				// d3.min(stocks, function(c) { return d3.min(c.values, function(v) { return v.close; }); }),
+				d3.max(orders, function(c) { return d3.max(c.values, function(v) { return v.Births; }); })
+			]);
+
+            // add the x axis
+			svg.append("g")
+				.attr("class", "x axis")
+				.attr("transform", "translate(0," + height + ")")
+				.call(xAxis);
+
+            // add the y axis
+			svg.append("g")
+					.attr("class", "y axis")
+					.call(yAxis)
+				.append("text")
+					.attr("transform","rotate(-90)")
+					.attr("y",-60)
+					.attr("dy",".71em")
+					.style("text-anchor","end")
+					.text("Births:");
+
+            // add circle at intersection
+			focus.append("circle")
+				.attr("class","y")
+				.attr("fill","none")
+				.attr("stroke","black")
+				.style("opacity",0.5)
+				.attr("r",8);
+
+			// add horizontal line at intersection
+			focus.append("line")
+				.attr("class","x")
+				.attr("stroke","black")
+				.attr("stroke-dasharray","3,3")
+				.style("opacity",0.5)
+				.attr("x1", 0)
+				.attr("x2", width);
+
+			// add vertical line at intersection
+			focus.append("line")
+				.attr("class","y")
+				.attr("stroke","black")
+				.attr("stroke-dasharray","3,3")
+				.style("opacity",0.5)
+				.attr("y1", 0)
+				.attr("y2", height);
+
+			// append rectangle for capturing if mouse moves within area
+			svg.append("rect")
+				.attr("width",width)
+				.attr("height",height)
+				.style("fill","none")
+				.style("pointer-events","all")
+				.on("mouseover", function() { focus.style("display", null); })
+				.on("mouseout", function() { focus.style("display", "none"); });
+				//.on("mousemove", mousemove);
+
+            // add the line groups
+			var thisOrder = svg.selectAll(".orderXYZ")
+					.data(orders)
+				.enter().append("g")
+					.attr("class","orderXYZ");
+
+            // add the stock price paths
+			thisOrder.append("path")
+				.attr("class","line")
+				.attr("id",function(d,i){ return "id" + i; })
+				.attr("d", function(d) {
+					return line(d.values); 
+				})
+				.style("stroke", function(d) { return color(d.name); });
+
+
+    }
+
+
+
+    )
+
+
+    </script>
 
 
 </body>
