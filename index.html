@@ -109,7 +109,7 @@
 	var focus = svg.append("g").style("display","none");
 
     // import data and create chart
-    d3.csv("data/birth_order.csv", function(d){
+    d3.csv("data/birth_order_pivot.csv", function(d){
         return {
             Year: +d.Year,
             Order: +d.Order,
