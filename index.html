@@ -10,6 +10,7 @@
         Start of project.
     </p>
 
+    <svg width="960" height="500"></svg>
     <script>
     /*    d3.csv("data/birth_order.csv", function(data) {
             for (var i = 0; i < data.length; i++) {
@@ -72,6 +73,8 @@
             });
     */
 
+
+/*
     // https://bl.ocks.org/benlcollins/2d7fb36cd0c295c00882
     // basic SVG setup
 	var margin = { top: 20, right: 100, bottom: 40, left: 100 };
@@ -109,42 +112,45 @@
 	var focus = svg.append("g").style("display","none");
 
     // import data and create chart
-    d3.csv("data/birth_order_pivot.csv", function(d){
-        return {
-            Year: +d.Year,
-            Order: +d.Order,
-            Change: +d.Change,
-            Births: +d.births
-        };
-    },
-    function(error, data) {
+    d3.csv("data/birth_order_simple.csv", function(error, data) {
+   // {
+   //     return {
+    //        Year: +d.Year,
+    //        Order: +d.Order,
+    //        Change: +d.Change,
+    //        Births: +d.births
+    //    };
+    //},
+        
         // sort data ascending
-        data.sort(function(a,b) {
-           return a.Year - b.Year;
-        });
+        //data.sort(function(a,b) {
+        //   return a.Year - b.Year;
+        //});
         // color domain
-			color.domain(d3.keys(data[0]).filter(function(key) { return key !== "Order"; }));
+			color.domain(d3.keys(data[0]).filter(function(key) { return key !== "Year"; }));
 
         // create Order array with object for each birth order containing all data
 			var orders = color.domain().map(function(name) {
 				return {
 					name: name,
 					values: data.map(function(d){
-						return { Year: d.Year, Births: d.Order };
+						return { year: +d.Year, births: +d[name] };
 					})
 				};
 			});
 
             // add domain ranges to the x and y scales
 			xScale.domain([
-				d3.min(orders, function(c) { return d3.min(c.values, function(v) { return v.Year; }); }),
-				d3.max(orders, function(c) { return d3.max(c.values, function(v) { return v.Year; }); })
+				d3.min(orders, function(c) { return d3.min(c.values, function(v) { return v.year; }); }),
+				d3.max(orders, function(c) { return d3.max(c.values, function(v) { return v.year; }); })
 			]);
 			yScale.domain([
 				0,
 				// d3.min(stocks, function(c) { return d3.min(c.values, function(v) { return v.close; }); }),
-				d3.max(orders, function(c) { return d3.max(c.values, function(v) { return v.Births; }); })
+				d3.max(orders, function(c) { return d3.max(c.values, function(v) { return v.births; }); })
 			]);
+
+            console.log(orders);
 
             // add the x axis
 			svg.append("g")
@@ -154,14 +160,14 @@
 
             // add the y axis
 			svg.append("g")
-					.attr("class", "y axis")
-					.call(yAxis)
+				.attr("class", "y axis")
+				.call(yAxis)
 				.append("text")
-					.attr("transform","rotate(-90)")
-					.attr("y",-60)
-					.attr("dy",".71em")
-					.style("text-anchor","end")
-					.text("Births:");
+				.attr("transform","rotate(-90)")
+				.attr("y",-60)
+				.attr("dy",".71em")
+				.style("text-anchor","end")
+				.text("Births:");
 
             // add circle at intersection
 			focus.append("circle")
@@ -201,25 +207,114 @@
 
             // add the line groups
 			var thisOrder = svg.selectAll(".orderXYZ")
-					.data(orders)
+				.data(orders)
 				.enter().append("g")
-					.attr("class","orderXYZ");
+				.attr("class","orderXYZ");
+            
+            //console.log(thisOrder);
 
             // add the stock price paths
 			thisOrder.append("path")
 				.attr("class","line")
-				.attr("id",function(d,i){ return "id" + i; })
-				.attr("d", function(d) {
-					return line(d.values); 
-				})
-				.style("stroke", function(d) { return color(d.name); });
+				.attr("id",function(data,i){ return "id" + i; })
+				//.attr("d", function(d) {
+			//		return line(d.births); 
+			//	})
+                .attr("data-legend", function(data) { return data.name })
+				.style("stroke", function(data) { return color(data.name); });
 
+            
 
     }
+    
+    );
+*/
+
+    // https://bl.ocks.org/mbostock/3884955
+
+    var svg = d3.select("svg"),
+    margin = {top: 20, right: 80, bottom: 30, left: 50},
+    width = svg.attr("width") - margin.left - margin.right,
+    height = svg.attr("height") - margin.top - margin.bottom,
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var parseTime = d3.timeParse("%Y");
+
+    var x = d3.scaleTime().range([0, width]),
+        y = d3.scaleLinear().range([height, 0]),
+        z = d3.scaleOrdinal(d3.schemeCategory10);
+
+    var line = d3.line()
+        .curve(d3.curveBasis)
+        .x(function(d) { return x(d.date); })
+        .y(function(d) { return y(d.births); });
+
+    d3.csv("data/birth_order_simple.csv", type, function(error, data) {
+    if (error) throw error;
+
+    var orders = data.columns.slice(1).map(function(id) {
+        return {
+        id: id,
+        values: data.map(function(d) {
+            return {date: +d.Year, births: d[id]};
+        })
+        };
+    });
+    console.log(orders);
+
+    x.domain(d3.extent(data, function(d) { return +d.Year; }));
+
+    console.log(d3.extent(data, function(d) { return +d.Year; }));
+
+    y.domain([
+        d3.min(orders, function(c) { return d3.min(c.values, function(d) { return d.births; }); }),
+        d3.max(orders, function(c) { return d3.max(c.values, function(d) { return d.births; }); })
+    ]);
 
 
+    z.domain(orders.map(function(c) { return c.id; }));
 
-    )
+    g.append("g")
+        .attr("class", "axis axis--x")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+    g.append("g")
+        .attr("class", "axis axis--y")
+        .call(d3.axisLeft(y))
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", "0.71em")
+        .attr("fill", "#000")
+        .text("Births");
+
+    var order = g.selectAll(".order")
+        .data(orders)
+        .enter().append("g")
+        .attr("class", "order");
+
+    order.append("path")
+        .attr("class", "line")
+        .attr("d", function(d) { return line(d.values); })
+        .style("stroke", function(d) { return z(d.id); });
+
+    //order.append("text")
+     //   .datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
+      //  .attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.births) + ")"; })
+       // .attr("x", 3)
+    //    .attr("dy", "0.35em")
+     //   .style("font", "10px sans-serif")
+     //   .text(function(d) { return d.id; });
+    });
+
+    function type(d, _, columns) {
+    d.date = parseTime(d.date);
+    for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
+    return d;
+    }
+
+    
 
 
     </script>
