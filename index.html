@@ -1,8 +1,27 @@
 <html>
+<meta charset="utf-8">
 <head>
-<title>CS498 Data Visualization Final</title>
+<title>Final</title>
 </head>
 <body>
-Start of project.
+    <script src="//d3js.org/d3.v4.min.js"></script>
+    <p>
+        Start of project.
+    </p>
+
+    <p>
+        <svg width="800" height="600"></svg>
+    </p>
+
+    <script>
+        d3.csv("data/birth_order.csv", function(data) {
+            for (var i = 0; i < data.length; i++) {
+                console.log(data[i]);
+                //console.log(data[i].Year);
+            }
+        });
+        </script>
+
+
 </body>
 </html>
