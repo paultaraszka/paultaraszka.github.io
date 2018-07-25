@@ -137,7 +137,7 @@
       .attr('width', width + margin.left) // can't catch mouse events on a g element
       .attr('height', height + margin.top)
       .attr('fill', 'none')
-      .attr("transform","translate(150,200)")
+      //.attr("transform","translate(50,200)")
       .attr('pointer-events', 'all')
       .on('mouseout', function() { // on mouse out hide line, circles and text
         d3.select(".mouse-line")
