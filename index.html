@@ -9,8 +9,10 @@
     <p>
         Start of project.
     </p>
-
-    <svg width="960" height="500"></svg>
+    <div id="chart-id" class="line-chart"></div>
+    <ul class="legend"></ul>
+    <!-- <script src="chartexample.js"></script> -->
+    <svg id="chart1" width="960" height="500"></svg>
     <script>
     
 
@@ -103,7 +105,8 @@
         .text(function(d) { return d.id; });
 
     var mouseG = svg.append("g")
-      .attr("class", "mouse-over-effects");
+      .attr("class", "mouse-over-effects")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     mouseG.append("path") // this is the black vertical line to follow mouse
       .attr("class", "mouse-line")
@@ -129,13 +132,13 @@
       .style("opacity", "0");
 
     mousePerLine.append("text")
-      .attr("transform", "translate(10,3)");
+      .attr("transform", "translate(10,-5)");
 
 
 
     mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
-      .attr('width', width + margin.left) // can't catch mouse events on a g element
-      .attr('height', height + margin.top)
+      .attr('width', width) // can't catch mouse events on a g element
+      .attr('height', height)
       .attr('fill', 'none')
       //.attr("transform","translate(50,200)")
       .attr('pointer-events', 'all')
@@ -189,7 +192,7 @@
             d3.select(this).select('text')
               .text(y.invert(pos.y).toFixed(0));
               
-            return "translate(" + (mouse[0] + margin.left) + "," + (pos.y + margin.top) + ")";
+            return "translate(" + mouse[0] + "," + pos.y + ")";
           });
           //.attr("transform", "translate(0,0)");
       });
