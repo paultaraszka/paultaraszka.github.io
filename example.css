@@ -1,61 +1,65 @@
+#chart-id {
+    height: 50%
+}
+
 .line-chart {
     width: 800px;
     height: 200px;
-  }
+}
   
-  .d3-axis {
-    font-family: 'Arial', sans-serif;
-    font-size: 10px;
-  }
-  
-  .d3-line {
-    fill: none;
-    stroke-width: 2px;
-  }
-  
-  .d3-axis path {
-    fill: none;
-    stroke: #e6e6e6;
-    shape-rendering: crispEdges;
-    opacity: 0; // remove axes
-  }
-  
-  .d3-axis line {
-    fill: none;
-    stroke: #eee;
-    shape-rendering: crispEdges;
-  }
-  
-  ul li {
-    display: inline-block;
-    margin-left: 10px;
-  }
-  .color-square {
-    display:block;
-    float:left;
-    margin-right:3px;
-    width:20px;
-    height:20px;
-    border:1px solid #000;
-    }
-    .view {
-      opacity:0;
-    }
-    .d3-tooltip {
-    position:absolute;
-    z-index:1000;
-    background:rgba(255,255,255,0.95);
-    padding:5px 10px;
-    border-radius:5px;
-    font-size:12px;
-    color:#202020;
-    //min-width:150px;
-    width:260px;
-    border:2px solid #02A6E3;  
-    -webkit-transform:translate(0,-50%);
-    transform:translate(0,-50%);
-    pointer-events:none;
-  }
-  .hidden {
-    display:none;
-  }
+.d3-axis {
+font-family: 'Arial', sans-serif;
+font-size: 10px;
+}
+
+.d3-line {
+fill: none;
+stroke-width: 2px;
+}
+
+.d3-axis path {
+fill: none;
+stroke: #e6e6e6;
+shape-rendering: crispEdges;
+opacity: 0; // remove axes
+}
+
+.d3-axis line {
+fill: none;
+stroke: #eee;
+shape-rendering: crispEdges;
+}
+
+ul li {
+display: inline-block;
+margin-left: 10px;
+}
+.color-square {
+display:block;
+float:left;
+margin-right:3px;
+width:20px;
+height:20px;
+border:1px solid #000;
+}
+.view {
+    opacity:0;
+}
+.d3-tooltip {
+position:absolute;
+z-index:1000;
+background:rgba(255,255,255,0.95);
+padding:5px 10px;
+border-radius:5px;
+font-size:12px;
+color:#202020;
+//min-width:150px;
+width:260px;
+border:2px solid #02A6E3;  
+-webkit-transform:translate(0,-50%);
+transform:translate(0,-50%);
+pointer-events:none;
+}
+.hidden {
+display:none;
+}

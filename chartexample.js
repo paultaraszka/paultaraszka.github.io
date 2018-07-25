@@ -3,36 +3,276 @@
 // https://jsfiddle.net/2en21Lqh/17
 
 
-var data = [{"name":"line1","date":"2016-10-15T11:01:00Z","value":57},
-{"name":"line1","date":"2016-10-15T11:02:00Z","value":22},
-{"name":"line1","date":"2016-10-15T11:03:00Z","value":75},
-{"name":"line1","date":"2016-10-15T11:04:00Z","value":69},
-{"name":"line2","date":"2016-10-15T11:01:00Z","value":18},
-{"name":"line2","date":"2016-10-15T11:02:00Z","value":47},
-{"name":"line2","date":"2016-10-15T11:03:00Z","value":39},
-{"name":"line2","date":"2016-10-15T11:04:00Z","value":12},
-{"name":"line3","date":"2016-10-15T11:01:00Z","value":60},
-{"name":"line3","date":"2016-10-15T11:02:00Z","value":95},
-{"name":"line3","date":"2016-10-15T11:03:00Z","value":85},
-{"name":"line3","date":"2016-10-15T11:04:00Z","value":67}]
+var data = [
+    {
+      "name": "1st",
+      "date": "2008",
+      "value": 211419
+    },
+    {
+      "name": "1st",
+      "date": "2009",
+      "value": 213513
+    },
+    {
+      "name": "1st",
+      "date": "2010",
+      "value": 207914
+    },
+    {
+      "name": "1st",
+      "date": "2011",
+      "value": 191788
+    },
+    {
+      "name": "1st",
+      "date": "2012",
+      "value": 188910
+    },
+    {
+      "name": "1st",
+      "date": "2013",
+      "value": 180282
+    },
+    {
+      "name": "1st",
+      "date": "2014",
+      "value": 178603
+    },
+    {
+      "name": "1st",
+      "date": "2015",
+      "value": 173669
+    },
+    {
+      "name": "1st",
+      "date": "2016",
+      "value": 175888
+    },
+    {
+      "name": "1st",
+      "date": "2017",
+      "value": 172642
+    },
+    {
+      "name": "2nd",
+      "date": "2008",
+      "value": 142551
+    },
+    {
+      "name": "2nd",
+      "date": "2009",
+      "value": 144047
+    },
+    {
+      "name": "2nd",
+      "date": "2010",
+      "value": 145763
+    },
+    {
+      "name": "2nd",
+      "date": "2011",
+      "value": 139912
+    },
+    {
+      "name": "2nd",
+      "date": "2012",
+      "value": 140774
+    },
+    {
+      "name": "2nd",
+      "date": "2013",
+      "value": 134806
+    },
+    {
+      "name": "2nd",
+      "date": "2014",
+      "value": 141026
+    },
+    {
+      "name": "2nd",
+      "date": "2015",
+      "value": 138681
+    },
+    {
+      "name": "2nd",
+      "date": "2016",
+      "value": 146967
+    },
+    {
+      "name": "2nd",
+      "date": "2017",
+      "value": 161272
+    },
+    {
+      "name": "3rd",
+      "date": "2008",
+      "value": 41054
+    },
+    {
+      "name": "3rd",
+      "date": "2009",
+      "value": 41273
+    },
+    {
+      "name": "3rd",
+      "date": "2010",
+      "value": 41305
+    },
+    {
+      "name": "3rd",
+      "date": "2011",
+      "value": 39694
+    },
+    {
+      "name": "3rd",
+      "date": "2012",
+      "value": 39801
+    },
+    {
+      "name": "3rd",
+      "date": "2013",
+      "value": 38640
+    },
+    {
+      "name": "3rd",
+      "date": "2014",
+      "value": 39721
+    },
+    {
+      "name": "3rd",
+      "date": "2015",
+      "value": 39039
+    },
+    {
+      "name": "3rd",
+      "date": "2016",
+      "value": 42524
+    },
+    {
+      "name": "3rd",
+      "date": "2017",
+      "value": 49965
+    },
+    {
+      "name": "4th",
+      "date": "2008",
+      "value": 12452
+    },
+    {
+      "name": "4th",
+      "date": "2009",
+      "value": 12048
+    },
+    {
+      "name": "4th",
+      "date": "2010",
+      "value": 12090
+    },
+    {
+      "name": "4th",
+      "date": "2011",
+      "value": 11481
+    },
+    {
+      "name": "4th",
+      "date": "2012",
+      "value": 11213
+    },
+    {
+      "name": "4th",
+      "date": "2013",
+      "value": 10566
+    },
+    {
+      "name": "4th",
+      "date": "2014",
+      "value": 10656
+    },
+    {
+      "name": "4th",
+      "date": "2015",
+      "value": 9995
+    },
+    {
+      "name": "4th",
+      "date": "2016",
+      "value": 10735
+    },
+    {
+      "name": "4th",
+      "date": "2017",
+      "value": 11896
+    },
+    {
+      "name": "5th+",
+      "date": "2008",
+      "value": 8961
+    },
+    {
+      "name": "5th+",
+      "date": "2009",
+      "value": 8456
+    },
+    {
+      "name": "5th+",
+      "date": "2010",
+      "value": 7958
+    },
+    {
+      "name": "5th+",
+      "date": "2011",
+      "value": 7194
+    },
+    {
+      "name": "5th+",
+      "date": "2012",
+      "value": 7160
+    },
+    {
+      "name": "5th+",
+      "date": "2013",
+      "value": 6668
+    },
+    {
+      "name": "5th+",
+      "date": "2014",
+      "value": 6495
+    },
+    {
+      "name": "5th+",
+      "date": "2015",
+      "value": 7924
+    },
+    {
+      "name": "5th+",
+      "date": "2016",
+      "value": 6143
+    },
+    {
+      "name": "5th+",
+      "date": "2017",
+      "value": 6207
+    }
+  ]
 
     margin = {
       top: 20,
       right: 20,
       bottom: 20,
-      left: 30
+      left: 50
     };
 
 
     var parentNode = d3.select('#chart-id').node(),
         parent = '#chart-id';
 
-    var containerwidth = 600, //parentNode.getBoundingClientRect().width,
-        containerheight = 400, //parentNode.getBoundingClientRect().height,
+    var containerwidth = parentNode.getBoundingClientRect().width,
+        containerheight = parentNode.getBoundingClientRect().height,
         width = containerwidth - margin.left - margin.right,
         height = containerheight - margin.top - margin.bottom;
                                                              
-    var parseTime = d3.timeParse("%Y-%m-%dT%H:%M:%SZ")
+    var parseTime = d3.timeParse("%Y")
     
     var bisectDate = d3.bisector(function(d) { 
       return d.date;
@@ -46,7 +286,7 @@ var data = [{"name":"line1","date":"2016-10-15T11:01:00Z","value":57},
     function sortByDateAscending(a, b) {
       return a.date - b.date;
     }
-    dataset = data.sort(sortByDateAscending);
+    //dataset = data.sort(sortByDateAscending);
 
     var dataGroup = d3.nest()
       .key(function(d) {
@@ -89,7 +329,7 @@ var data = [{"name":"line1","date":"2016-10-15T11:01:00Z","value":57},
       var x0 = xz.invert(d3.mouse(this)[0]);
     
       var lastDate,
-      		cys = [],
+      	  cys = [],
           ds = [];
       
       dataGroup.forEach(function(e) { 
@@ -111,6 +351,7 @@ var data = [{"name":"line1","date":"2016-10-15T11:01:00Z","value":57},
           top = Math.min(containerheight, mouse[1]+margin.top+margin.right);
 
       //console.log(fData);
+      console.log(lastDate.getFullYear());
 
       d3.selectAll(parent + ' .d3-focuspoint')
         .classed("hidden", false)
@@ -120,7 +361,7 @@ var data = [{"name":"line1","date":"2016-10-15T11:01:00Z","value":57},
       });
 
       tooltip
-        .html(lastDate.toString() + "<br/>" + ds.join("<br/>"))
+        .html("For the year: " + lastDate.getFullYear().toString() + "<br/>" + ds.join("<br/>"))
         .classed('hidden', false)
         .style('left', left + 'px')
         .style('top', top + 'px');          
