@@ -21,7 +21,8 @@ stroke-width: 2px;
 fill: none;
 stroke: #e6e6e6;
 shape-rendering: crispEdges;
-opacity: 0; // remove axes
+opacity: 1; // remove axes
+//opacity: 0; // remove axes
 }
 
 .d3-axis line {
