@@ -701,7 +701,7 @@ var data = [
         .style('left', (xz(announceYear) - 80) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
 
-      var tooltip1 = d3.select(parent)
+      var tooltip2 = d3.select(parent)
       .append('div') 
       .attr("id","thing1")                                                             
       .attr('class', 'annotation')
