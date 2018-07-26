@@ -674,14 +674,7 @@ var data = [
         .style("stroke", "#cecece")
         .style("fill", "none");
 
-      //lines.append("text")
-      //  .classed("annotation", true)
-      // .attr("x",xz(announceYear) - 110 )
-      //  .attr("y", 0)
-      //  .attr("text-anchor", "left")
-      //  .text("Family 500 announced")
-
-      lines.append("line")
+        lines.append("line")
         .attr("id", "start")
         .attr("x1", xz(startYear))  //<<== change your code here
         .attr("y1", 0)
@@ -690,6 +683,15 @@ var data = [
         .style("stroke-width", 1)
         .style("stroke", "#cecece")
         .style("fill", "none");
+
+      //lines.append("text")
+      //  .classed("annotation", true)
+      // .attr("x",xz(announceYear) - 110 )
+      //  .attr("y", 0)
+      //  .attr("text-anchor", "left")
+      //  .text("Family 500 announced")
+
+
       
 
       var tooltip1 = d3.select(parent)
@@ -697,7 +699,6 @@ var data = [
       .attr("id","thing1")                                                             
       .attr('class', 'annotation')
       .html("Family 500 announced")
-        .classed('hidden', false)
         .style('left', (xz(announceYear) - 80) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
 
@@ -706,7 +707,6 @@ var data = [
       .attr("id","thing1")                                                             
       .attr('class', 'annotation')
       .html("Family 500 implemented")
-        .classed('hidden', false)
         .style('left', (xz(startYear) +50) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
       //lines.append("div")
