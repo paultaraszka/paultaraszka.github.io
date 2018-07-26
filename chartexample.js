@@ -680,7 +680,9 @@ var data = [
         .attr("x2", xz(announceYear))  //<<== and here
         .attr("y2", height)
         .style("stroke-width", 1)
-        .style("stroke", "#cecece")
+        .style("stroke", "#02A6E3")
+        .style("stroke-dasharray","5,5")
+        .style("opacity", ".75")
         .style("fill", "none");
 
         lines.append("line")
@@ -690,7 +692,10 @@ var data = [
         .attr("x2", xz(startYear))  //<<== and here
         .attr("y2", height)
         .style("stroke-width", 1)
-        .style("stroke", "#cecece")
+        //.style("lineDashType", "dash")
+        .style("stroke", "#02A6E3")
+        .style("stroke-dasharray","5,5")
+        .style("opacity", ".75")
         .style("fill", "none");
 
       //lines.append("text")
