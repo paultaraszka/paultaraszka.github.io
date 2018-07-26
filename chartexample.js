@@ -391,6 +391,8 @@ var data = [
     data.forEach(function(d) {
       d.date = parseTime(d.date);
       d.value = +d.value;
+      //if (d.name === "Total" ? d.enabled = false : d.enabled = !d.enabled );
+      //visible: (name === "Unemployment" ? true : false)
     });
 
     function sortByDateAscending(a, b) {
@@ -405,9 +407,16 @@ var data = [
       .entries(data);
 
     dataGroup.forEach(function(d) {
-      d.enabled = true;
+      
+      console.log(d);
+      d.enabled = false;
+      if (d.key == "Total") {
+        d.enabled = true;
+      } 
+      //d.enabled = true;
     });               
     
+
     var svg = d3.select(parent)
       .append('svg')
       .attr('width', containerwidth)
@@ -698,7 +707,7 @@ var data = [
       .append('div') 
       .attr("id","thing1")                                                             
       .attr('class', 'annotation')
-      .html("Family 500 announced")
+      .html("Family 500 program details first announced")
         .style('left', (xz(announceYear) - 80) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
 
@@ -706,8 +715,8 @@ var data = [
       .append('div') 
       .attr("id","thing1")                                                             
       .attr('class', 'annotation')
-      .html("Family 500 implemented")
-        .style('left', (xz(startYear) +50) + 'px')
+      .html("Family 500 program put into law and implemented")
+        .style('left', (xz(startYear) +40) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
       //lines.append("div")
         //.classed("annotation", true)
