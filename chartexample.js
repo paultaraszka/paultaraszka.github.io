@@ -368,7 +368,7 @@ var data = [
 
     margin = {
       top: 20,
-      right: 20,
+      right: 50,
       bottom: 20,
       left: 50
     };
@@ -527,6 +527,8 @@ var data = [
     var xAxisGroup = svg.append('g').attr('class', 'x d3-axis').attr('transform', 'translate(0,' + height + ')');
     var yAxisGroup = svg.append('g').attr('class', 'y d3-axis').attr('transform', 'translate(0,0)');
 
+
+    
     var line = d3.line();  // Line generator
     
     var focuspoints, fData;
@@ -554,6 +556,8 @@ var data = [
       .text(function(d) {
         return (d.values[0].name)
       });
+
+      
 
     redraw();
 
@@ -619,6 +623,11 @@ var data = [
       // exit the whole group
       lines
         .exit().remove();
+      
+      lines.select("#announce").remove();
+      lines.select("#start").remove();
+      lines.selectAll(".annotation").remove();
+      d3.selectAll(".annotation").remove();
 
       // enter selection
       linesEnter = lines
@@ -651,10 +660,68 @@ var data = [
         .style("fill", function(d, i) {
           return colorScale5(d.key);
         });
+
+      var announceYear = new Date(2015,0,1,0,0,0);
+      var startYear = new Date(2016,0,1,0,0,0);
+
+      lines.append("line")
+        .attr("id", "announce")
+        .attr("x1", xz(announceYear))  //<<== change your code here
+        .attr("y1", 0)
+        .attr("x2", xz(announceYear))  //<<== and here
+        .attr("y2", height)
+        .style("stroke-width", 1)
+        .style("stroke", "#cecece")
+        .style("fill", "none");
+
+      //lines.append("text")
+      //  .classed("annotation", true)
+      // .attr("x",xz(announceYear) - 110 )
+      //  .attr("y", 0)
+      //  .attr("text-anchor", "left")
+      //  .text("Family 500 announced")
+
+      lines.append("line")
+        .attr("id", "start")
+        .attr("x1", xz(startYear))  //<<== change your code here
+        .attr("y1", 0)
+        .attr("x2", xz(startYear))  //<<== and here
+        .attr("y2", height)
+        .style("stroke-width", 1)
+        .style("stroke", "#cecece")
+        .style("fill", "none");
+      
+
+      var tooltip1 = d3.select(parent)
+      .append('div') 
+      .attr("id","thing1")                                                             
+      .attr('class', 'annotation')
+      .html("Family 500 announced")
+        .classed('hidden', false)
+        .style('left', (xz(announceYear) - 80) + 'px')
+        .style('top', (margin.top + 50) + 'px'); 
+
+      var tooltip1 = d3.select(parent)
+      .append('div') 
+      .attr("id","thing1")                                                             
+      .attr('class', 'annotation')
+      .html("Family 500 implemented")
+        .classed('hidden', false)
+        .style('left', (xz(startYear) +50) + 'px')
+        .style('top', (margin.top + 50) + 'px'); 
+      //lines.append("div")
+        //.classed("annotation", true)
+        //.style('left', 20 + 'px')
+        //.style('top', 20 + 'px')  
+        //.attr("x",xz(startYear) - 30 )
+        //.attr("y", 0)
+//        .attr("text-anchor", "left")
+        //.html("For the year ");
+        //.text("Family 500 implemented")
         
       } 
     
-$(window).on('resize', function() {
+/*$(window).on('resize', function() {
   containerwidth = parentNode.getBoundingClientRect().width,
   containerheight = parentNode.getBoundingClientRect().height,
   width = containerwidth - margin.left - margin.right,
@@ -680,4 +747,4 @@ $(window).on('resize', function() {
  
    svg.call(zoom.transform, d3.zoomIdentity);
 
-});    
+});   */ 
