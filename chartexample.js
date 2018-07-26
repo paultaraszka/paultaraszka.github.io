@@ -4,257 +4,367 @@
 
 
 var data = [
-    {
-      "name": "1st",
-      "date": "2008",
-      "value": 211419
-    },
-    {
-      "name": "1st",
-      "date": "2009",
-      "value": 213513
-    },
-    {
-      "name": "1st",
-      "date": "2010",
-      "value": 207914
-    },
-    {
-      "name": "1st",
-      "date": "2011",
-      "value": 191788
-    },
-    {
-      "name": "1st",
-      "date": "2012",
-      "value": 188910
-    },
-    {
-      "name": "1st",
-      "date": "2013",
-      "value": 180282
-    },
-    {
-      "name": "1st",
-      "date": "2014",
-      "value": 178603
-    },
-    {
-      "name": "1st",
-      "date": "2015",
-      "value": 173669
-    },
-    {
-      "name": "1st",
-      "date": "2016",
-      "value": 175888
-    },
-    {
-      "name": "1st",
-      "date": "2017",
-      "value": 172642
-    },
-    {
-      "name": "2nd",
-      "date": "2008",
-      "value": 142551
-    },
-    {
-      "name": "2nd",
-      "date": "2009",
-      "value": 144047
-    },
-    {
-      "name": "2nd",
-      "date": "2010",
-      "value": 145763
-    },
-    {
-      "name": "2nd",
-      "date": "2011",
-      "value": 139912
-    },
-    {
-      "name": "2nd",
-      "date": "2012",
-      "value": 140774
-    },
-    {
-      "name": "2nd",
-      "date": "2013",
-      "value": 134806
-    },
-    {
-      "name": "2nd",
-      "date": "2014",
-      "value": 141026
-    },
-    {
-      "name": "2nd",
-      "date": "2015",
-      "value": 138681
-    },
-    {
-      "name": "2nd",
-      "date": "2016",
-      "value": 146967
-    },
-    {
-      "name": "2nd",
-      "date": "2017",
-      "value": 161272
-    },
-    {
-      "name": "3rd",
-      "date": "2008",
-      "value": 41054
-    },
-    {
-      "name": "3rd",
-      "date": "2009",
-      "value": 41273
-    },
-    {
-      "name": "3rd",
-      "date": "2010",
-      "value": 41305
-    },
-    {
-      "name": "3rd",
-      "date": "2011",
-      "value": 39694
-    },
-    {
-      "name": "3rd",
-      "date": "2012",
-      "value": 39801
-    },
-    {
-      "name": "3rd",
-      "date": "2013",
-      "value": 38640
-    },
-    {
-      "name": "3rd",
-      "date": "2014",
-      "value": 39721
-    },
-    {
-      "name": "3rd",
-      "date": "2015",
-      "value": 39039
-    },
-    {
-      "name": "3rd",
-      "date": "2016",
-      "value": 42524
-    },
-    {
-      "name": "3rd",
-      "date": "2017",
-      "value": 49965
-    },
-    {
-      "name": "4th",
-      "date": "2008",
-      "value": 12452
-    },
-    {
-      "name": "4th",
-      "date": "2009",
-      "value": 12048
-    },
-    {
-      "name": "4th",
-      "date": "2010",
-      "value": 12090
-    },
-    {
-      "name": "4th",
-      "date": "2011",
-      "value": 11481
-    },
-    {
-      "name": "4th",
-      "date": "2012",
-      "value": 11213
-    },
-    {
-      "name": "4th",
-      "date": "2013",
-      "value": 10566
-    },
-    {
-      "name": "4th",
-      "date": "2014",
-      "value": 10656
-    },
-    {
-      "name": "4th",
-      "date": "2015",
-      "value": 9995
-    },
-    {
-      "name": "4th",
-      "date": "2016",
-      "value": 10735
-    },
-    {
-      "name": "4th",
-      "date": "2017",
-      "value": 11896
-    },
-    {
-      "name": "5th+",
-      "date": "2008",
-      "value": 8961
-    },
-    {
-      "name": "5th+",
-      "date": "2009",
-      "value": 8456
-    },
-    {
-      "name": "5th+",
-      "date": "2010",
-      "value": 7958
-    },
-    {
-      "name": "5th+",
-      "date": "2011",
-      "value": 7194
-    },
-    {
-      "name": "5th+",
-      "date": "2012",
-      "value": 7160
-    },
-    {
-      "name": "5th+",
-      "date": "2013",
-      "value": 6668
-    },
-    {
-      "name": "5th+",
-      "date": "2014",
-      "value": 6495
-    },
-    {
-      "name": "5th+",
-      "date": "2015",
-      "value": 7924
-    },
-    {
-      "name": "5th+",
-      "date": "2016",
-      "value": 6143
-    },
-    {
-      "name": "5th+",
-      "date": "2017",
-      "value": 6207
-    }
-  ]
+  {
+     "name": "Total",
+     "date": "2008",
+     "change": "0%",
+     "value": 416437
+  },
+  {
+     "name": "Total",
+     "date": "2009",
+     "change": "0.70%",
+     "value": 419337
+  },
+  {
+     "name": "Total",
+     "date": "2010",
+     "change": "-1.02%",
+     "value": 415030
+  },
+  {
+     "name": "Total",
+     "date": "2011",
+     "change": "-6.01%",
+     "value": 390069
+  },
+  {
+     "name": "Total",
+     "date": "2012",
+     "change": "-5.67%",
+     "value": 387858
+  },
+  {
+     "name": "Total",
+     "date": "2013",
+     "change": "-4.36%",
+     "value": 370962
+  },
+  {
+     "name": "Total",
+     "date": "2014",
+     "change": "1.49%",
+     "value": 376501
+  },
+  {
+     "name": "Total",
+     "date": "2015",
+     "change": "-1.91%",
+     "value": 369308
+  },
+  {
+     "name": "Total",
+     "date": "2016",
+     "change": "3.51%",
+     "value": 382257
+  },
+  {
+     "name": "Total",
+     "date": "2017",
+     "change": "5.16%",
+     "value": 401982
+  },
+  {
+     "name": "1st",
+     "date": "2008",
+     "change": "-2.62%",
+     "value": 211419
+  },
+  {
+     "name": "1st",
+     "date": "2009",
+     "change": "0.99%",
+     "value": 213513
+  },
+  {
+     "name": "1st",
+     "date": "2010",
+     "change": "-2.62%",
+     "value": 207914
+  },
+  {
+     "name": "1st",
+     "date": "2011",
+     "change": "-7.76%",
+     "value": 191788
+  },
+  {
+     "name": "1st",
+     "date": "2012",
+     "change": "-1.50%",
+     "value": 188910
+  },
+  {
+     "name": "1st",
+     "date": "2013",
+     "change": "-4.57%",
+     "value": 180282
+  },
+  {
+     "name": "1st",
+     "date": "2014",
+     "change": "-0.93%",
+     "value": 178603
+  },
+  {
+     "name": "1st",
+     "date": "2015",
+     "change": "-2.76%",
+     "value": 173669
+  },
+  {
+     "name": "1st",
+     "date": "2016",
+     "change": "1.28%",
+     "value": 175888
+  },
+  {
+     "name": "1st",
+     "date": "2017",
+     "change": "-1.85%",
+     "value": 172642
+  },
+  {
+     "name": "2nd",
+     "date": "2008",
+     "change": "0%",
+     "value": 142551
+  },
+  {
+     "name": "2nd",
+     "date": "2009",
+     "change": "1.05%",
+     "value": 144047
+  },
+  {
+     "name": "2nd",
+     "date": "2010",
+     "change": "1.19%",
+     "value": 145763
+  },
+  {
+     "name": "2nd",
+     "date": "2011",
+     "change": "-4.01%",
+     "value": 139912
+  },
+  {
+     "name": "2nd",
+     "date": "2012",
+     "change": "0.62%",
+     "value": 140774
+  },
+  {
+     "name": "2nd",
+     "date": "2013",
+     "change": "-4.24%",
+     "value": 134806
+  },
+  {
+     "name": "2nd",
+     "date": "2014",
+     "change": "4.61%",
+     "value": 141026
+  },
+  {
+     "name": "2nd",
+     "date": "2015",
+     "change": "-1.66%",
+     "value": 138681
+  },
+  {
+     "name": "2nd",
+     "date": "2016",
+     "change": "5.97%",
+     "value": 146967
+  },
+  {
+     "name": "2nd",
+     "date": "2017",
+     "change": "9.73%",
+     "value": 161272
+  },
+  {
+     "name": "3rd",
+     "date": "2008",
+     "change": "0%",
+     "value": 41054
+  },
+  {
+     "name": "3rd",
+     "date": "2009",
+     "change": "0.53%",
+     "value": 41273
+  },
+  {
+     "name": "3rd",
+     "date": "2010",
+     "change": "0.08%",
+     "value": 41305
+  },
+  {
+     "name": "3rd",
+     "date": "2011",
+     "change": "-3.90%",
+     "value": 39694
+  },
+  {
+     "name": "3rd",
+     "date": "2012",
+     "change": "0.27%",
+     "value": 39801
+  },
+  {
+     "name": "3rd",
+     "date": "2013",
+     "change": "-2.92%",
+     "value": 38640
+  },
+  {
+     "name": "3rd",
+     "date": "2014",
+     "change": "2.80%",
+     "value": 39721
+  },
+  {
+     "name": "3rd",
+     "date": "2015",
+     "change": "-1.72%",
+     "value": 39039
+  },
+  {
+     "name": "3rd",
+     "date": "2016",
+     "change": "8.93%",
+     "value": 42524
+  },
+  {
+     "name": "3rd",
+     "date": "2017",
+     "change": "17.50%",
+     "value": 49965
+  },
+  {
+     "name": "4th",
+     "date": "2008",
+     "change": "0%",
+     "value": 12452
+  },
+  {
+     "name": "4th",
+     "date": "2009",
+     "change": "-3.24%",
+     "value": 12048
+  },
+  {
+     "name": "4th",
+     "date": "2010",
+     "change": "0.35%",
+     "value": 12090
+  },
+  {
+     "name": "4th",
+     "date": "2011",
+     "change": "-5.04%",
+     "value": 11481
+  },
+  {
+     "name": "4th",
+     "date": "2012",
+     "change": "-2.33%",
+     "value": 11213
+  },
+  {
+     "name": "4th",
+     "date": "2013",
+     "change": "-5.77%",
+     "value": 10566
+  },
+  {
+     "name": "4th",
+     "date": "2014",
+     "change": "0.85%",
+     "value": 10656
+  },
+  {
+     "name": "4th",
+     "date": "2015",
+     "change": "-6.20%",
+     "value": 9995
+  },
+  {
+     "name": "4th",
+     "date": "2016",
+     "change": "7.40%",
+     "value": 10735
+  },
+  {
+     "name": "4th",
+     "date": "2017",
+     "change": "10.82%",
+     "value": 11896
+  },
+  {
+     "name": "5th+",
+     "date": "2008",
+     "change": "0%",
+     "value": 8961
+  },
+  {
+     "name": "5th+",
+     "date": "2009",
+     "change": "-5.64%",
+     "value": 8456
+  },
+  {
+     "name": "5th+",
+     "date": "2010",
+     "change": "-5.89%",
+     "value": 7958
+  },
+  {
+     "name": "5th+",
+     "date": "2011",
+     "change": "-9.60%",
+     "value": 7194
+  },
+  {
+     "name": "5th+",
+     "date": "2012",
+     "change": "-0.47%",
+     "value": 7160
+  },
+  {
+     "name": "5th+",
+     "date": "2013",
+     "change": "-6.87%",
+     "value": 6668
+  },
+  {
+     "name": "5th+",
+     "date": "2014",
+     "change": "-2.59%",
+     "value": 6495
+  },
+  {
+     "name": "5th+",
+     "date": "2015",
+     "change": "22.00%",
+     "value": 7924
+  },
+  {
+     "name": "5th+",
+     "date": "2016",
+     "change": "-22.48%",
+     "value": 6143
+  },
+  {
+     "name": "5th+",
+     "date": "2017",
+     "change": "1.04%",
+     "value": 6207
+  }
+]
 
     margin = {
       top: 20,
@@ -341,7 +451,7 @@ var data = [
 
         lastDate = d.date;
         if (e.enabled) cys.push(d.value);
-        if (e.enabled) ds.push(e.key + " " + d.value);
+        if (e.enabled) ds.push("<b>" + e.key + " child:</b> " + d.value + "&emsp;<b>Change:</b> " + d.change );
       });
     
       var mouse = d3.mouse(svg.node()).map(function(d) {
@@ -351,7 +461,7 @@ var data = [
           top = Math.min(containerheight, mouse[1]+margin.top+margin.right);
 
       //console.log(fData);
-      console.log(lastDate.getFullYear());
+      //console.log(lastDate.getFullYear());
 
       d3.selectAll(parent + ' .d3-focuspoint')
         .classed("hidden", false)
@@ -361,7 +471,7 @@ var data = [
       });
 
       tooltip
-        .html("For the year: " + lastDate.getFullYear().toString() + "<br/>" + ds.join("<br/>"))
+        .html("For the year <b>" + lastDate.getFullYear().toString() + "</b>:<br/>" + ds.join("<br/>"))
         .classed('hidden', false)
         .style('left', left + 'px')
         .style('top', top + 'px');          
@@ -407,8 +517,8 @@ var data = [
     var xz=x,xy=y; // Used to store zoom scales        
   
     var colorScale5 = d3.scaleOrdinal()
-    	 .domain([1,2,3,4,5])
-    	 .range(["#2d74d0", "#ab2ecd", "#dd2170","#fa5802", "#c8b331"]);    
+    	 .domain([1,2,3,4,5,6])
+    	 .range(["#2d74d0", "#ab2ecd", "#dd2170", "#c8b331", "#fa5802", "#74ab6e"]);    
 
 
 
