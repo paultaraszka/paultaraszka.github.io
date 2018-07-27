@@ -368,7 +368,7 @@ var data = [
 
     margin = {
       top: 20,
-      right: 125,
+      right: 160,
       bottom: 20,
       left: 50
     };
@@ -441,6 +441,8 @@ var data = [
     var tooltip = d3.select(parent)
       .append('div')                                                              
       .attr('class', 'd3-tooltip hidden');
+
+    var tooltip1, tooltip2;
    
    
     var mousemoveFunc = function(d, i) {
@@ -708,21 +710,31 @@ var data = [
 
       
 
-      var tooltip1 = d3.select(parent)
-      .append('div') 
-      .attr("id","thing1")                                                             
-      .attr('class', 'annotation')
+      tooltip1 = d3.select(parent)
+      .append('div')                                                              
+      .classed('annotation', true)
+      //.classed('d3-focuspoint',true)
+      //.classed('hidden',true)
       .html("Family 500 program details first announced")
         .style('left', (xz(announceYear) - 80) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
 
-      var tooltip2 = d3.select(parent)
-      .append('div') 
-      .attr("id","thing1")                                                             
-      .attr('class', 'annotation')
+      if (((xz(announceYear))-110) > width) {
+        tooltip1.classed("hidden",true);
+      };
+
+      tooltip2 = d3.select(parent)
+      .append('div')                                                            
+      .classed('annotation', true)
+      //.classed('d3-focuspoint',true)
+      //.classed('hidden',true)
       .html("Family 500 program put into law and implemented")
         .style('left', (xz(startYear) +40) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
+
+      if (((xz(startYear))-110) > width) {
+        tooltip2.classed("hidden",true);
+      };
       //lines.append("div")
         //.classed("annotation", true)
         //.style('left', 20 + 'px')
