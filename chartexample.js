@@ -368,7 +368,7 @@ var data = [
 
     margin = {
       top: 20,
-      right: 50,
+      right: 125,
       bottom: 20,
       left: 50
     };
@@ -482,8 +482,8 @@ var data = [
       tooltip
         .html("For the year <b>" + lastDate.getFullYear().toString() + "</b>:<br/>" + ds.join("<br/>"))
         .classed('hidden', false)
-        .style('left', left + 'px')
-        .style('top', top + 'px');          
+        .style('left', (left) + 'px')
+        .style('top', (top) + 'px');          
     
     };
     
