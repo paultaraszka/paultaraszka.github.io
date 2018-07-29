@@ -576,6 +576,7 @@ groups.selectAll( 'rect' )
         return y_scale(d[0]) - y_scale(d[1]);
     })
     .attr("width", x_scale.bandwidth())
+    .style("opacity", ".75")
     .on( 'mouseover', function( d ) {
         var x = parseFloat( d3.select(this).attr('x')) + (x_scale.bandwidth() /2) + (chart_width*i) + 50;
         var y = parseFloat( d3.select(this).attr('y')) + chart_height /2 - 100;
