@@ -64,7 +64,306 @@ var data = [
      "change": "5.16%",
      "value": 401982
   },
-  
+  {
+     "name": "1st",
+     "date": "2008",
+     "change": "-2.62%",
+     "value": 211419
+  },
+  {
+     "name": "1st",
+     "date": "2009",
+     "change": "0.99%",
+     "value": 213513
+  },
+  {
+     "name": "1st",
+     "date": "2010",
+     "change": "-2.62%",
+     "value": 207914
+  },
+  {
+     "name": "1st",
+     "date": "2011",
+     "change": "-7.76%",
+     "value": 191788
+  },
+  {
+     "name": "1st",
+     "date": "2012",
+     "change": "-1.50%",
+     "value": 188910
+  },
+  {
+     "name": "1st",
+     "date": "2013",
+     "change": "-4.57%",
+     "value": 180282
+  },
+  {
+     "name": "1st",
+     "date": "2014",
+     "change": "-0.93%",
+     "value": 178603
+  },
+  {
+     "name": "1st",
+     "date": "2015",
+     "change": "-2.76%",
+     "value": 173669
+  },
+  {
+     "name": "1st",
+     "date": "2016",
+     "change": "1.28%",
+     "value": 175888
+  },
+  {
+     "name": "1st",
+     "date": "2017",
+     "change": "-1.85%",
+     "value": 172642
+  },
+  {
+     "name": "2nd",
+     "date": "2008",
+     "change": "0%",
+     "value": 142551
+  },
+  {
+     "name": "2nd",
+     "date": "2009",
+     "change": "1.05%",
+     "value": 144047
+  },
+  {
+     "name": "2nd",
+     "date": "2010",
+     "change": "1.19%",
+     "value": 145763
+  },
+  {
+     "name": "2nd",
+     "date": "2011",
+     "change": "-4.01%",
+     "value": 139912
+  },
+  {
+     "name": "2nd",
+     "date": "2012",
+     "change": "0.62%",
+     "value": 140774
+  },
+  {
+     "name": "2nd",
+     "date": "2013",
+     "change": "-4.24%",
+     "value": 134806
+  },
+  {
+     "name": "2nd",
+     "date": "2014",
+     "change": "4.61%",
+     "value": 141026
+  },
+  {
+     "name": "2nd",
+     "date": "2015",
+     "change": "-1.66%",
+     "value": 138681
+  },
+  {
+     "name": "2nd",
+     "date": "2016",
+     "change": "5.97%",
+     "value": 146967
+  },
+  {
+     "name": "2nd",
+     "date": "2017",
+     "change": "9.73%",
+     "value": 161272
+  },
+  {
+     "name": "3rd",
+     "date": "2008",
+     "change": "0%",
+     "value": 41054
+  },
+  {
+     "name": "3rd",
+     "date": "2009",
+     "change": "0.53%",
+     "value": 41273
+  },
+  {
+     "name": "3rd",
+     "date": "2010",
+     "change": "0.08%",
+     "value": 41305
+  },
+  {
+     "name": "3rd",
+     "date": "2011",
+     "change": "-3.90%",
+     "value": 39694
+  },
+  {
+     "name": "3rd",
+     "date": "2012",
+     "change": "0.27%",
+     "value": 39801
+  },
+  {
+     "name": "3rd",
+     "date": "2013",
+     "change": "-2.92%",
+     "value": 38640
+  },
+  {
+     "name": "3rd",
+     "date": "2014",
+     "change": "2.80%",
+     "value": 39721
+  },
+  {
+     "name": "3rd",
+     "date": "2015",
+     "change": "-1.72%",
+     "value": 39039
+  },
+  {
+     "name": "3rd",
+     "date": "2016",
+     "change": "8.93%",
+     "value": 42524
+  },
+  {
+     "name": "3rd",
+     "date": "2017",
+     "change": "17.50%",
+     "value": 49965
+  },
+  {
+     "name": "4th",
+     "date": "2008",
+     "change": "0%",
+     "value": 12452
+  },
+  {
+     "name": "4th",
+     "date": "2009",
+     "change": "-3.24%",
+     "value": 12048
+  },
+  {
+     "name": "4th",
+     "date": "2010",
+     "change": "0.35%",
+     "value": 12090
+  },
+  {
+     "name": "4th",
+     "date": "2011",
+     "change": "-5.04%",
+     "value": 11481
+  },
+  {
+     "name": "4th",
+     "date": "2012",
+     "change": "-2.33%",
+     "value": 11213
+  },
+  {
+     "name": "4th",
+     "date": "2013",
+     "change": "-5.77%",
+     "value": 10566
+  },
+  {
+     "name": "4th",
+     "date": "2014",
+     "change": "0.85%",
+     "value": 10656
+  },
+  {
+     "name": "4th",
+     "date": "2015",
+     "change": "-6.20%",
+     "value": 9995
+  },
+  {
+     "name": "4th",
+     "date": "2016",
+     "change": "7.40%",
+     "value": 10735
+  },
+  {
+     "name": "4th",
+     "date": "2017",
+     "change": "10.82%",
+     "value": 11896
+  },
+  {
+     "name": "5th+",
+     "date": "2008",
+     "change": "0%",
+     "value": 8961
+  },
+  {
+     "name": "5th+",
+     "date": "2009",
+     "change": "-5.64%",
+     "value": 8456
+  },
+  {
+     "name": "5th+",
+     "date": "2010",
+     "change": "-5.89%",
+     "value": 7958
+  },
+  {
+     "name": "5th+",
+     "date": "2011",
+     "change": "-9.60%",
+     "value": 7194
+  },
+  {
+     "name": "5th+",
+     "date": "2012",
+     "change": "-0.47%",
+     "value": 7160
+  },
+  {
+     "name": "5th+",
+     "date": "2013",
+     "change": "-6.87%",
+     "value": 6668
+  },
+  {
+     "name": "5th+",
+     "date": "2014",
+     "change": "-2.59%",
+     "value": 6495
+  },
+  {
+     "name": "5th+",
+     "date": "2015",
+     "change": "22.00%",
+     "value": 7924
+  },
+  {
+     "name": "5th+",
+     "date": "2016",
+     "change": "-22.48%",
+     "value": 6143
+  },
+  {
+     "name": "5th+",
+     "date": "2017",
+     "change": "1.04%",
+     "value": 6207
+  }
 ]
 
     margin = {
@@ -109,7 +408,7 @@ var data = [
 
     dataGroup.forEach(function(d) {
       
-      console.log(d);
+      //console.log(d);
       d.enabled = false;
       if (d.key == "Total") {
         d.enabled = true;
@@ -269,16 +568,16 @@ var data = [
         return (d.values[0].name)
       });
 
-      // text label for the y axis
-      svg.append("text")
-      .attr("transform", "rotate(-90,-25,25)")
-      .attr("y", 0 )
-      .attr("x",0 - (height / 2))
-      .attr("dy", "1em")
-      .style("text-anchor", "middle")
-      .style("font-family","sans-serif")
-      .style("font-size","14px")
-      .text("Births");  
+       // text label for the y axis
+    svg.append("text")
+    .attr("transform", "rotate(-90,-25,25)")
+    .attr("y", 0 )
+    .attr("x",0 - (height / 2))
+    .attr("dy", "1em")
+    .style("text-anchor", "middle")
+    .style("font-family","sans-serif")
+    .style("font-size","14px")
+    .text("Births"); 
 
     redraw();
 
