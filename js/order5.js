@@ -681,6 +681,8 @@ var data = [
           return colorScale5(d.key);
         });
 
+
+        /*
       var announceYear = new Date(2015,0,1,0,0,0);
       var startYear = new Date(2016,0,1,0,0,0);
 
@@ -708,6 +710,7 @@ var data = [
         .style("stroke-dasharray","5,5")
         .style("opacity", ".25")
         .style("fill", "none");
+        */
 
       //lines.append("text")
       //  .classed("annotation", true)
@@ -718,7 +721,7 @@ var data = [
 
 
       
-
+/*
       tooltip1 = d3.select(parent)
       .append('div')                                                              
       .classed('annotation', true)
@@ -732,6 +735,7 @@ var data = [
         tooltip1.classed("hidden",true);
       };
 
+      
       tooltip2 = d3.select(parent)
       .append('div')                                                            
       .classed('annotation', true)
@@ -744,6 +748,9 @@ var data = [
       if (((xz(startYear))-110) > width) {
         tooltip2.classed("hidden",true);
       };
+
+*/
+
       //lines.append("div")
         //.classed("annotation", true)
         //.style('left', 20 + 'px')

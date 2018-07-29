@@ -551,7 +551,7 @@ var data = [
       .enter()
       .append("li")
       .on('click', function(d) {
-        d.enabled = !d.enabled;  // Javascript toggle
+        //d.enabled = !d.enabled;  // Javascript toggle
         //svg.call(zoom.transform, d3.zoomIdentity);  // reset to zoomidentity
         redraw();
       });
