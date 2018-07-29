@@ -1,5 +1,5 @@
 var data1 = [
-    [
+    [//15-19
       {
         "year": "2008",
         "UnmarriedRural": 5741,
@@ -71,7 +71,7 @@ var data1 = [
         "MarriedUrban": 635
       }
     ],
-    [
+    [//20-24
         {
             "year": "2008",
             "UnmarriedRural": 10495,
@@ -143,7 +143,7 @@ var data1 = [
             "MarriedUrban": 11935
           }  
     ],
-    [
+    [//25-29
         {
             "year": "2008",
             "UnmarriedRural": 6258,
@@ -214,30 +214,273 @@ var data1 = [
             "MarriedRural": 49856,
             "MarriedUrban": 56623
           }  
+    ],
+    [//30-34
+        {
+            "year": "2008",
+            "UnmarriedRural": 3294,
+            "UnmarriedUrban": 9946,
+            "MarriedRural": 34193,
+            "MarriedUrban": 58522
+          },
+          {
+          "year": "2009",
+            "UnmarriedRural": 3716,
+            "UnmarriedUrban": 10925,
+            "MarriedRural": 34555,
+            "MarriedUrban": 61724
+          },
+          {
+          "year": "2010",
+            "UnmarriedRural": 3952,
+            "UnmarriedUrban": 11334,
+            "MarriedRural": 35760,
+            "MarriedUrban": 62788
+          },
+          {
+            "year": "2011",
+            "UnmarriedRural": 4094,
+            "UnmarriedUrban": 11293,
+            "MarriedRural": 34738,
+            "MarriedUrban": 59846
+          },
+          {
+            "year": "2012",
+            "UnmarriedRural": 4196,
+            "UnmarriedUrban": 11701,
+            "MarriedRural": 35228,
+            "MarriedUrban": 59654
+          },
+          {
+            "year": "2013",
+            "UnmarriedRural": 4639,
+            "UnmarriedUrban": 11887,
+            "MarriedRural": 35166,
+            "MarriedUrban": 58533
+          },
+          {
+            "year": "2014",
+            "UnmarriedRural": 4958,
+            "UnmarriedUrban": 13135,
+            "MarriedRural": 37523,
+            "MarriedUrban": 61781
+          },
+          {
+            "year": "2015",
+            "UnmarriedRural": 5241,
+            "UnmarriedUrban": 14087,
+            "MarriedRural": 36886,
+            "MarriedUrban": 62926
+          },
+          {
+            "year": "2016",
+            "UnmarriedRural": 5540,
+            "UnmarriedUrban": 15148,
+            "MarriedRural": 39487,
+            "MarriedUrban": 66019
+          },
+          {
+            "year": "2017",
+            "UnmarriedRural": 5986,
+            "UnmarriedUrban": 16094,
+            "MarriedRural": 43556,
+            "MarriedUrban": 69258
+          } 
+    ],
+    [//35-39
+        {
+            "year": "2008",
+            "UnmarriedRural": 1459,
+            "UnmarriedUrban": 4143,
+            "MarriedRural": 12253,
+            "MarriedUrban": 17456
+          },
+          {
+          "year": "2009",
+            "UnmarriedRural": 1668,
+            "UnmarriedUrban": 4886,
+            "MarriedRural": 12641,
+            "MarriedUrban": 19427
+          },
+          {
+          "year": "2010",
+            "UnmarriedRural": 1954,
+            "UnmarriedUrban": 5381,
+            "MarriedRural": 13485,
+            "MarriedUrban": 20959
+          },
+          {
+            "year": "2011",
+            "UnmarriedRural": 1951,
+            "UnmarriedUrban": 5589,
+            "MarriedRural": 13480,
+            "MarriedUrban": 20828
+          },
+          {
+            "year": "2012",
+            "UnmarriedRural": 2212,
+            "UnmarriedUrban": 6016,
+            "MarriedRural": 14035,
+            "MarriedUrban": 21761
+          },
+          {
+            "year": "2013",
+            "UnmarriedRural": 2226,
+            "UnmarriedUrban": 6156,
+            "MarriedRural": 13504,
+            "MarriedUrban": 21668
+          },
+          {
+            "year": "2014",
+            "UnmarriedRural": 2405,
+            "UnmarriedUrban": 6842,
+            "MarriedRural": 14367,
+            "MarriedUrban": 23499
+          },
+          {
+            "year": "2015",
+            "UnmarriedRural": 2521,
+            "UnmarriedUrban": 7138,
+            "MarriedRural": 14346,
+            "MarriedUrban": 23967
+          },
+          {
+            "year": "2016",
+            "UnmarriedRural": 2556,
+            "UnmarriedUrban": 7735,
+            "MarriedRural": 15820,
+            "MarriedUrban": 26205
+          },
+          {
+            "year": "2017",
+            "UnmarriedRural": 2870,
+            "UnmarriedUrban": 8414,
+            "MarriedRural": 17716,
+            "MarriedUrban": 28563
+          }
+    ],
+    [//40-44
+        {
+            "year": "2008",
+            "UnmarriedRural": 350,
+            "UnmarriedUrban": 821,
+            "MarriedRural": 2523,
+            "MarriedUrban": 2850
+          },
+          {
+          "year": "2009",
+            "UnmarriedRural": 375,
+            "UnmarriedUrban": 929,
+            "MarriedRural": 2625,
+            "MarriedUrban": 2862
+          },
+          {
+          "year": "2010",
+            "UnmarriedRural": 385,
+            "UnmarriedUrban": 1067,
+            "MarriedRural": 2614,
+            "MarriedUrban": 3134
+          },
+          {
+            "year": "2011",
+            "UnmarriedRural": 433,
+            "UnmarriedUrban": 1081,
+            "MarriedRural": 2589,
+            "MarriedUrban": 3162
+          },
+          {
+            "year": "2012",
+            "UnmarriedRural": 470,
+            "UnmarriedUrban": 1185,
+            "MarriedRural": 2702,
+            "MarriedUrban": 3214
+          },
+          {
+            "year": "2013",
+            "UnmarriedRural": 491,
+            "UnmarriedUrban": 1266,
+            "MarriedRural": 2764,
+            "MarriedUrban": 3276
+          },
+          {
+            "year": "2014",
+            "UnmarriedRural": 527,
+            "UnmarriedUrban": 1455,
+            "MarriedRural": 2709,
+            "MarriedUrban": 3687
+          },
+          {
+            "year": "2015",
+            "UnmarriedRural": 549,
+            "UnmarriedUrban": 1540,
+            "MarriedRural": 2802,
+            "MarriedUrban": 3834
+          },
+          {
+            "year": "2016",
+            "UnmarriedRural": 628,
+            "UnmarriedUrban": 1810,
+            "MarriedRural": 2910,
+            "MarriedUrban": 4310
+          },
+          {
+            "year": "2017",
+            "UnmarriedRural": 689,
+            "UnmarriedUrban": 1924,
+            "MarriedRural": 3202,
+            "MarriedUrban": 4826
+          }  
     ]
 ]
 
 
-var chart_width     =   150;
+margin = {
+    top: 20,
+    right: 160,
+    bottom: 50,
+    left: 55
+  };
+
+
+var chart_width     =   110;
 var chart_height    =   400;
 var color           =   d3.scaleOrdinal( d3.schemeCategory10 );
 
+var parent = '#chart';
 
 var data = data1[0];// paul
 
+//var x = d3.scaleTime().range([0, chart_width]),      // No domains yet!
+//    y = d3.scaleLinear().range([chart_height, 0]);
+
 // Scales
+var year_scale  =   d3.scaleLinear()
+    .domain([2008,2018])
+    .range([0,chart_width]);
 var x_scale         =   d3.scaleBand()
+    //.domain(d3.range(data.length))
     .domain(d3.range(data.length))
     .range([0, chart_width])
     .paddingInner(0.05);
 var y_scale         =   d3.scaleLinear()
     .domain([
         0,
-        160000
+        170000
         //d3.max( data, function(d){return d.UnmarriedRural + d.UnmarriedUrban + d.MarriedRural + d.MarriedUrban;})
     ])
-    .range([ chart_height, 0 ]);
+    .range([ chart_height-margin.bottom, 0 ]);
 
+    var yAxis, xAxis, yAxisGroup, xAxisGroup;
+
+    svg             =   d3.select("#chart")
+    .append("svg")
+    .attr("width", 50)
+    .attr("height", chart_height);
+    yAxis = d3.axisLeft(y_scale).ticks(5).tickSizeInner(-chart_width).tickSizeOuter(0);
+    //xAxisGroup = svg.append('g').attr('class', 'x d3-axis').attr('transform', 'translate(0,' + (chart_height) + ')');
+    yAxisGroup = svg.append('g').attr('class', 'y d3-axis').attr('transform', 'translate(45,0)');
+
+    yAxisGroup.call(yAxis.scale(y_scale));
 
 // Stack Layout
 var stack           =   d3.stack().keys([
@@ -249,6 +492,16 @@ var stack           =   d3.stack().keys([
 var stack_data ;//     =   stack(data);
 
 var svg, groups;
+var yAxis, xAxis, yAxisGroup, xAxisGroup;
+
+
+/* Tooltip */  
+//var tooltip = d3.select('parent')
+//    .append('div')
+//    .attr('class', 'd3-tooltip hidden');;
+d3.select( '#tooltip')
+.classed("hidden",true);
+
 
 data1.forEach(function(d, i) { 
     console.log(d + " " + i); 
@@ -288,14 +541,46 @@ groups.selectAll( 'rect' )
     .attr("height", function(d) {
         return y_scale(d[0]) - y_scale(d[1]);
     })
-    .attr("width", x_scale.bandwidth());
+    .attr("width", x_scale.bandwidth())
+    .on( 'mouseover', function( d ) {
+        var x = parseFloat( d3.select(this).attr('x')) + (x_scale.bandwidth() /2) + (chart_width*i) + 50;
+        var y = parseFloat( d3.select(this).attr('y')) + chart_height /2 - 100;
+
+        d3.select( '#tooltip')
+        .style('left',x+"px")
+        .style('top',y+"px")
+        .style('display','block')
+        .html("For the year <b>" + d.data["year"] + "</b>:<br/>" + 
+              "\n<b>All Mothers:</b> " + d[1] +
+              "\n<b>Unmarried Rural:</b> " + d.data["UnmarriedRural"] +
+              "\n<b>Unmarried Urban:</b> " + d.data["UnmarriedUrban"] +
+              "\n<b>Married Rural:</b> " + d.data["MarriedRural"] +
+              "\n<b>Married Urban:</b> " + d.data["MarriedUrban"] +
+              "<br/>");
+        //.text(d["1"] + " total." );
+        
+        console.log(d);
+    })
+    .on ('mouseout', function() {
+        d3.select( '#tooltip')
+        .style('display','none');
+    });
 
 
+    xAxis = d3.axisBottom(x_scale).tickSizeInner(2).tickSizeOuter(0);
+    //yAxis = d3.axisLeft(y_scale).ticks(5).tickSizeInner(-chart_width).tickSizeOuter(0);
+    xAxisGroup = svg.append('g').attr('class', 'x d3-axis')
+        .attr('transform', 'translate(0,' + (chart_height-50) + ')');
+    
+   
+    xAxisGroup.call(xAxis.scale(year_scale)).selectAll("text").attr('transform', 'translate(15,0)rotate(-90,0,20)');
 });
 
-    var x = d3.scaleTime().range([0, chart_width]),      // No domains yet!
-    y = d3.scaleLinear().range([chart_height, 0]);
-    var xAxis = d3.axisBottom(x).tickSizeInner(2).tickSizeOuter(0);
-    var yAxis = d3.axisLeft(y).ticks(5).tickSizeInner(-chart_width).tickSizeOuter(0);
-    var xAxisGroup = svg.append('g').attr('class', 'x d3-axis').attr('transform', 'translate(0,' + chart_height + ')');
-    var yAxisGroup = svg.append('g').attr('class', 'y d3-axis').attr('transform', 'translate(0,50)');
+    //var ticks = d3.selectAll(".tick text");
+    //ticks.attr("class", function(d,i){
+    //        if(i%2 != 0) d3.select(this).remove();
+     //   });
+    //var xAxis = d3.axisBottom(x).tickSizeInner(2).tickSizeOuter(0);
+    //var yAxis = d3.axisLeft(y).ticks(5).tickSizeInner(-chart_width).tickSizeOuter(0);
+    //var xAxisGroup = svg.append('g').attr('class', 'x d3-axis').attr('transform', 'translate(0,' + chart_height + ')');
+    //var yAxisGroup = svg.append('g').attr('class', 'y d3-axis').attr('transform', 'translate(0,-50)');
