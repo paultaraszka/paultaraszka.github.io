@@ -87,3 +87,7 @@ display:none;
 .overview-text {
     font-size:12px;
 }
+button {
+    display: block;
+    margin: 0 auto
+}
