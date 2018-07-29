@@ -2,10 +2,10 @@
 <meta charset="utf-8">
 <head>
 <title>Final</title>
-<link rel="stylesheet" typle="text/css" href="example.css">
+<link rel="stylesheet" typle="text/css" href="age.css">
 </head>
 <body>
-    <script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <p class="text-stuff">
     
         <div align="left">
@@ -13,8 +13,23 @@
             <a href="age2.html"><input type="button" class="button_example" value="Step Forward" /></a> &nbsp;&nbsp;&nbsp;<b>Births in Poland by Mother's Age 2008-2017</b>
         </div>
     </p>
-    <div id="chart-id" class="line-chart"></div>
-    <ul class="legend"></ul>
+    <div id="chart"></div>
+    <style>
+
+        form {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          position: absolute;
+          left: 10px;
+          top: 10px;
+        }
+        
+        label {
+          display: block;
+        }
+        
+        </style>
+        
+        <svg width="1200" height="500"></svg>
     <script src="age1.js"></script>
     <p>
     </p>

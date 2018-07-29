@@ -408,7 +408,7 @@ var data = [
 
     dataGroup.forEach(function(d) {
       
-      console.log(d);
+      //console.log(d);
       d.enabled = false;
       if (d.key == "Total") {
         d.enabled = true;
