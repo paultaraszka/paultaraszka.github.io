@@ -5,65 +5,293 @@
 
 var data = [
   {
-     "name": "Total",
-     "date": "2008",
-     "change": "0%",
-     "value": 416437
-  },
-  {
-     "name": "Total",
-     "date": "2009",
-     "change": "0.70%",
-     "value": 419337
-  },
-  {
-     "name": "Total",
-     "date": "2010",
-     "change": "-1.02%",
-     "value": 415030
-  },
-  {
-     "name": "Total",
-     "date": "2011",
-     "change": "-6.01%",
-     "value": 390069
-  },
-  {
-     "name": "Total",
-     "date": "2012",
-     "change": "-5.67%",
-     "value": 387858
-  },
-  {
-     "name": "Total",
-     "date": "2013",
-     "change": "-4.36%",
-     "value": 370962
-  },
-  {
-     "name": "Total",
-     "date": "2014",
-     "change": "1.49%",
-     "value": 376501
-  },
-  {
-     "name": "Total",
-     "date": "2015",
-     "change": "-1.91%",
-     "value": 369308
-  },
-  {
-     "name": "Total",
-     "date": "2016",
-     "change": "3.51%",
-     "value": 382257
-  },
-  {
-     "name": "Total",
-     "date": "2017",
-     "change": "5.16%",
-     "value": 401982
-  },
+    "name": "All Children",
+    "date": "2008",
+    "change": "0%",
+    "value": 416437
+ },
+ {
+    "name": "All Children",
+    "date": "2009",
+    "change": "0.70%",
+    "value": 419337
+ },
+ {
+    "name": "All Children",
+    "date": "2010",
+    "change": "-1.02%",
+    "value": 415030
+ },
+ {
+    "name": "All Children",
+    "date": "2011",
+    "change": "-6.01%",
+    "value": 390069
+ },
+ {
+    "name": "All Children",
+    "date": "2012",
+    "change": "-0.57%",
+    "value": 387858
+ },
+ {
+    "name": "All Children",
+    "date": "2013",
+    "change": "-4.36%",
+    "value": 370962
+ },
+ {
+    "name": "All Children",
+    "date": "2014",
+    "change": "1.49%",
+    "value": 376501
+ },
+ {
+    "name": "All Children",
+    "date": "2015",
+    "change": "-1.91%",
+    "value": 369308
+ },
+ {
+    "name": "1st",
+    "date": "2008",
+    "change": "-2.62%",
+    "value": 211419
+ },
+ {
+    "name": "1st",
+    "date": "2009",
+    "change": "0.99%",
+    "value": 213513
+ },
+ {
+    "name": "1st",
+    "date": "2010",
+    "change": "-2.62%",
+    "value": 207914
+ },
+ {
+    "name": "1st",
+    "date": "2011",
+    "change": "-7.76%",
+    "value": 191788
+ },
+ {
+    "name": "1st",
+    "date": "2012",
+    "change": "-1.50%",
+    "value": 188910
+ },
+ {
+    "name": "1st",
+    "date": "2013",
+    "change": "-4.57%",
+    "value": 180282
+ },
+ {
+    "name": "1st",
+    "date": "2014",
+    "change": "-0.93%",
+    "value": 178603
+ },
+ {
+    "name": "1st",
+    "date": "2015",
+    "change": "-2.76%",
+    "value": 173669
+ },
+ {
+    "name": "2nd",
+    "date": "2008",
+    "change": "0%",
+    "value": 142551
+ },
+ {
+    "name": "2nd",
+    "date": "2009",
+    "change": "1.05%",
+    "value": 144047
+ },
+ {
+    "name": "2nd",
+    "date": "2010",
+    "change": "1.19%",
+    "value": 145763
+ },
+ {
+    "name": "2nd",
+    "date": "2011",
+    "change": "-4.01%",
+    "value": 139912
+ },
+ {
+    "name": "2nd",
+    "date": "2012",
+    "change": "0.62%",
+    "value": 140774
+ },
+ {
+    "name": "2nd",
+    "date": "2013",
+    "change": "-4.24%",
+    "value": 134806
+ },
+ {
+    "name": "2nd",
+    "date": "2014",
+    "change": "4.61%",
+    "value": 141026
+ },
+ {
+    "name": "2nd",
+    "date": "2015",
+    "change": "-1.66%",
+    "value": 138681
+ },
+ {
+    "name": "3rd",
+    "date": "2008",
+    "change": "0%",
+    "value": 41054
+ },
+ {
+    "name": "3rd",
+    "date": "2009",
+    "change": "0.53%",
+    "value": 41273
+ },
+ {
+    "name": "3rd",
+    "date": "2010",
+    "change": "0.08%",
+    "value": 41305
+ },
+ {
+    "name": "3rd",
+    "date": "2011",
+    "change": "-3.90%",
+    "value": 39694
+ },
+ {
+    "name": "3rd",
+    "date": "2012",
+    "change": "0.27%",
+    "value": 39801
+ },
+ {
+    "name": "3rd",
+    "date": "2013",
+    "change": "-2.92%",
+    "value": 38640
+ },
+ {
+    "name": "3rd",
+    "date": "2014",
+    "change": "2.80%",
+    "value": 39721
+ },
+ {
+    "name": "3rd",
+    "date": "2015",
+    "change": "-1.72%",
+    "value": 39039
+ },
+ {
+    "name": "4th",
+    "date": "2008",
+    "change": "0%",
+    "value": 12452
+ },
+ {
+    "name": "4th",
+    "date": "2009",
+    "change": "-3.24%",
+    "value": 12048
+ },
+ {
+    "name": "4th",
+    "date": "2010",
+    "change": "0.35%",
+    "value": 12090
+ },
+ {
+    "name": "4th",
+    "date": "2011",
+    "change": "-5.04%",
+    "value": 11481
+ },
+ {
+    "name": "4th",
+    "date": "2012",
+    "change": "-2.33%",
+    "value": 11213
+ },
+ {
+    "name": "4th",
+    "date": "2013",
+    "change": "-5.77%",
+    "value": 10566
+ },
+ {
+    "name": "4th",
+    "date": "2014",
+    "change": "0.85%",
+    "value": 10656
+ },
+ {
+    "name": "4th",
+    "date": "2015",
+    "change": "-6.20%",
+    "value": 9995
+ },
+ {
+    "name": "5th+",
+    "date": "2008",
+    "change": "0%",
+    "value": 8961
+ },
+ {
+    "name": "5th+",
+    "date": "2009",
+    "change": "-5.64%",
+    "value": 8456
+ },
+ {
+    "name": "5th+",
+    "date": "2010",
+    "change": "-5.89%",
+    "value": 7958
+ },
+ {
+    "name": "5th+",
+    "date": "2011",
+    "change": "-9.60%",
+    "value": 7194
+ },
+ {
+    "name": "5th+",
+    "date": "2012",
+    "change": "-0.47%",
+    "value": 7160
+ },
+ {
+    "name": "5th+",
+    "date": "2013",
+    "change": "-6.87%",
+    "value": 6668
+ },
+ {
+    "name": "5th+",
+    "date": "2014",
+    "change": "-2.59%",
+    "value": 6495
+ },
+ {
+    "name": "5th+",
+    "date": "2015",
+    "change": "22.00%",
+    "value": 7924
+ }
   
 ]
 
@@ -109,12 +337,12 @@ var data = [
 
     dataGroup.forEach(function(d) {
       
-      console.log(d);
-      d.enabled = false;
-      if (d.key == "Total") {
-        d.enabled = true;
-      } 
-      //d.enabled = true;
+      //console.log(d);
+      //d.enabled = false;
+      //if (d.key == "All Children") {
+      //  d.enabled = true;
+      //} 
+      d.enabled = true;
     });               
     
 
@@ -163,7 +391,7 @@ var data = [
 
         lastDate = d.date;
         if (e.enabled) cys.push(d.value);
-        if (e.enabled) ds.push("<b>" + e.key + " child:</b> " + d.value + "&emsp;<b>Change:</b> " + d.change );
+        if (e.enabled) ds.push("<b>" + e.key + ":</b> " + d.value + "&emsp;<b>Change:</b> " + d.change );
       });
     
       var mouse = d3.mouse(svg.node()).map(function(d) {
@@ -218,7 +446,7 @@ var data = [
       .extent([[0, 0], [width, height]])
       .on("zoom", redraw);
     
-    svg.call(zoom); // Call zoom function
+    //svg.call(zoom); // Call zoom function
                   
 
     var transform = d3.zoomTransform(svg.node()); // Get svg transform properties to rescale Axes/redraw zommed lines
@@ -283,6 +511,8 @@ var data = [
     redraw();
 
     function redraw() {
+
+      var maxYear = new Date(2017,0,1,0,0,0);
     
       tooltip.classed('hidden', true);
       d3.selectAll(parent + ' .d3-focuspoint').classed('hidden', true);
@@ -308,11 +538,7 @@ var data = [
             return d.date;
           });
         }),
-        d3.max(fData, function(c) {
-          return d3.max(c.values, function(d) {
-            return d.date;
-          });
-        })
+        maxYear
       ]);
 
       xz = transform.rescaleX(x);
@@ -384,6 +610,7 @@ var data = [
 
       var announceYear = new Date(2015,0,1,0,0,0);
       var startYear = new Date(2016,0,1,0,0,0);
+      
 
       lines.append("line")
         .attr("id", "announce")
@@ -394,21 +621,10 @@ var data = [
         .style("stroke-width", 1)
         .style("stroke", "#02A6E3")
         .style("stroke-dasharray","5,5")
-        .style("opacity", ".75")
+        .style("opacity", ".25")
         .style("fill", "none");
 
-        lines.append("line")
-        .attr("id", "start")
-        .attr("x1", xz(startYear))  //<<== change your code here
-        .attr("y1", 0)
-        .attr("x2", xz(startYear))  //<<== and here
-        .attr("y2", height)
-        .style("stroke-width", 1)
-        //.style("lineDashType", "dash")
-        .style("stroke", "#02A6E3")
-        .style("stroke-dasharray","5,5")
-        .style("opacity", ".75")
-        .style("fill", "none");
+      
 
       //lines.append("text")
       //  .classed("annotation", true)
@@ -425,7 +641,7 @@ var data = [
       .classed('annotation', true)
       //.classed('d3-focuspoint',true)
       //.classed('hidden',true)
-      .html("Family 500 program details first announced")
+      .html("Continued decrease. The government will try something new and announces plans for financial incentives for 2nd child or higher.")
         .style('left', (xz(announceYear) - 80) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
 
@@ -433,18 +649,7 @@ var data = [
         tooltip1.classed("hidden",true);
       };
 
-      tooltip2 = d3.select(parent)
-      .append('div')                                                            
-      .classed('annotation', true)
-      //.classed('d3-focuspoint',true)
-      //.classed('hidden',true)
-      .html("Family 500 program put into law and implemented")
-        .style('left', (xz(startYear) +40) + 'px')
-        .style('top', (margin.top + 50) + 'px'); 
-
-      if (((xz(startYear))-110) > width) {
-        tooltip2.classed("hidden",true);
-      };
+      
       //lines.append("div")
         //.classed("annotation", true)
         //.style('left', 20 + 'px')

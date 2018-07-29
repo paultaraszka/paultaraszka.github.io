@@ -5,65 +5,185 @@
 
 var data = [
   {
-     "name": "Total",
-     "date": "2008",
-     "change": "0%",
-     "value": 416437
-  },
-  {
-     "name": "Total",
-     "date": "2009",
-     "change": "0.70%",
-     "value": 419337
-  },
-  {
-     "name": "Total",
-     "date": "2010",
-     "change": "-1.02%",
-     "value": 415030
-  },
-  {
-     "name": "Total",
-     "date": "2011",
-     "change": "-6.01%",
-     "value": 390069
-  },
-  {
-     "name": "Total",
-     "date": "2012",
-     "change": "-5.67%",
-     "value": 387858
-  },
-  {
-     "name": "Total",
-     "date": "2013",
-     "change": "-4.36%",
-     "value": 370962
-  },
-  {
-     "name": "Total",
-     "date": "2014",
-     "change": "1.49%",
-     "value": 376501
-  },
-  {
-     "name": "Total",
-     "date": "2015",
-     "change": "-1.91%",
-     "value": 369308
-  },
-  {
-     "name": "Total",
-     "date": "2016",
-     "change": "3.51%",
-     "value": 382257
-  },
-  {
-     "name": "Total",
-     "date": "2017",
-     "change": "5.16%",
-     "value": 401982
-  },
+    "name": "All Children",
+    "date": "2008",
+    "change": "0%",
+    "value": 416437
+ },
+ {
+    "name": "All Children",
+    "date": "2009",
+    "change": "0.70%",
+    "value": 419337
+ },
+ {
+    "name": "All Children",
+    "date": "2010",
+    "change": "-1.02%",
+    "value": 415030
+ },
+ {
+    "name": "All Children",
+    "date": "2011",
+    "change": "-6.01%",
+    "value": 390069
+ },
+ {
+    "name": "All Children",
+    "date": "2012",
+    "change": "-0.57%",
+    "value": 387858
+ },
+ {
+    "name": "1st",
+    "date": "2008",
+    "change": "-2.62%",
+    "value": 211419
+ },
+ {
+    "name": "1st",
+    "date": "2009",
+    "change": "0.99%",
+    "value": 213513
+ },
+ {
+    "name": "1st",
+    "date": "2010",
+    "change": "-2.62%",
+    "value": 207914
+ },
+ {
+    "name": "1st",
+    "date": "2011",
+    "change": "-7.76%",
+    "value": 191788
+ },
+ {
+    "name": "1st",
+    "date": "2012",
+    "change": "-1.50%",
+    "value": 188910
+ },
+ {
+    "name": "2nd",
+    "date": "2008",
+    "change": "0%",
+    "value": 142551
+ },
+ {
+    "name": "2nd",
+    "date": "2009",
+    "change": "1.05%",
+    "value": 144047
+ },
+ {
+    "name": "2nd",
+    "date": "2010",
+    "change": "1.19%",
+    "value": 145763
+ },
+ {
+    "name": "2nd",
+    "date": "2011",
+    "change": "-4.01%",
+    "value": 139912
+ },
+ {
+    "name": "2nd",
+    "date": "2012",
+    "change": "0.62%",
+    "value": 140774
+ },
+ {
+    "name": "3rd",
+    "date": "2008",
+    "change": "0%",
+    "value": 41054
+ },
+ {
+    "name": "3rd",
+    "date": "2009",
+    "change": "0.53%",
+    "value": 41273
+ },
+ {
+    "name": "3rd",
+    "date": "2010",
+    "change": "0.08%",
+    "value": 41305
+ },
+ {
+    "name": "3rd",
+    "date": "2011",
+    "change": "-3.90%",
+    "value": 39694
+ },
+ {
+    "name": "3rd",
+    "date": "2012",
+    "change": "0.27%",
+    "value": 39801
+ },
+ {
+    "name": "4th",
+    "date": "2008",
+    "change": "0%",
+    "value": 12452
+ },
+ {
+    "name": "4th",
+    "date": "2009",
+    "change": "-3.24%",
+    "value": 12048
+ },
+ {
+    "name": "4th",
+    "date": "2010",
+    "change": "0.35%",
+    "value": 12090
+ },
+ {
+    "name": "4th",
+    "date": "2011",
+    "change": "-5.04%",
+    "value": 11481
+ },
+ {
+    "name": "4th",
+    "date": "2012",
+    "change": "-2.33%",
+    "value": 11213
+ },
+ {
+    "name": "5th+",
+    "date": "2008",
+    "change": "0%",
+    "value": 8961
+ },
+ {
+    "name": "5th+",
+    "date": "2009",
+    "change": "-5.64%",
+    "value": 8456
+ },
+ {
+    "name": "5th+",
+    "date": "2010",
+    "change": "-5.89%",
+    "value": 7958
+ },
+ {
+    "name": "5th+",
+    "date": "2011",
+    "change": "-9.60%",
+    "value": 7194
+ },
+ {
+    "name": "5th+",
+    "date": "2012",
+    "change": "-0.47%",
+    "value": 7160
+ }
   
 ]
 
@@ -110,11 +230,11 @@ var data = [
     dataGroup.forEach(function(d) {
       
       //console.log(d);
-      d.enabled = false;
-      if (d.key == "Total") {
-        d.enabled = true;
-      } 
-      //d.enabled = true;
+      //d.enabled = false;
+      //if (d.key == "All Children") {
+      //  d.enabled = true;
+      //} 
+      d.enabled = true;
     });               
     
 
@@ -163,7 +283,7 @@ var data = [
 
         lastDate = d.date;
         if (e.enabled) cys.push(d.value);
-        if (e.enabled) ds.push("<b>" + e.key + " child:</b> " + d.value + "&emsp;<b>Change:</b> " + d.change );
+        if (e.enabled) ds.push("<b>" + e.key + ":</b> " + d.value + "&emsp;<b>Change:</b> " + d.change );
       });
     
       var mouse = d3.mouse(svg.node()).map(function(d) {
@@ -218,7 +338,7 @@ var data = [
       .extent([[0, 0], [width, height]])
       .on("zoom", redraw);
     
-    svg.call(zoom); // Call zoom function
+    //svg.call(zoom); // Call zoom function
                   
 
     var transform = d3.zoomTransform(svg.node()); // Get svg transform properties to rescale Axes/redraw zommed lines
@@ -287,6 +407,9 @@ var data = [
 
     function redraw() {
     
+
+      var maxYear = new Date(2017,0,1,0,0,0);
+
       tooltip.classed('hidden', true);
       d3.selectAll(parent + ' .d3-focuspoint').classed('hidden', true);
 
@@ -311,11 +434,7 @@ var data = [
             return d.date;
           });
         }),
-        d3.max(fData, function(c) {
-          return d3.max(c.values, function(d) {
-            return d.date;
-          });
-        })
+        maxYear
       ]);
 
       xz = transform.rescaleX(x);
@@ -387,40 +506,23 @@ var data = [
 
       var announceYear = new Date(2015,0,1,0,0,0);
       var startYear = new Date(2016,0,1,0,0,0);
+      var markYear = new Date(2012,0,1,0,0,0);
 
       lines.append("line")
         .attr("id", "announce")
-        .attr("x1", xz(announceYear))  //<<== change your code here
+        .attr("x1", xz(markYear))  //<<== change your code here
         .attr("y1", 0)
-        .attr("x2", xz(announceYear))  //<<== and here
+        .attr("x2", xz(markYear))  //<<== and here
         .attr("y2", height)
         .style("stroke-width", 1)
         .style("stroke", "#02A6E3")
         .style("stroke-dasharray","5,5")
-        .style("opacity", ".75")
+        .style("opacity", ".25")
         .style("fill", "none");
 
-        lines.append("line")
-        .attr("id", "start")
-        .attr("x1", xz(startYear))  //<<== change your code here
-        .attr("y1", 0)
-        .attr("x2", xz(startYear))  //<<== and here
-        .attr("y2", height)
-        .style("stroke-width", 1)
-        //.style("lineDashType", "dash")
-        .style("stroke", "#02A6E3")
-        .style("stroke-dasharray","5,5")
-        .style("opacity", ".75")
-        .style("fill", "none");
+       
 
-      //lines.append("text")
-      //  .classed("annotation", true)
-      // .attr("x",xz(announceYear) - 110 )
-      //  .attr("y", 0)
-      //  .attr("text-anchor", "left")
-      //  .text("Family 500 announced")
-
-
+   
       
 
       tooltip1 = d3.select(parent)
@@ -428,62 +530,15 @@ var data = [
       .classed('annotation', true)
       //.classed('d3-focuspoint',true)
       //.classed('hidden',true)
-      .html("Family 500 program details first announced")
-        .style('left', (xz(announceYear) - 80) + 'px')
+      .html("The birth rate has been declining for many years, sometimes flattening but never increasing.")
+        .style('left', (xz(markYear) - 80) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
 
       if (((xz(announceYear))-110) > width) {
         tooltip1.classed("hidden",true);
       };
 
-      tooltip2 = d3.select(parent)
-      .append('div')                                                            
-      .classed('annotation', true)
-      //.classed('d3-focuspoint',true)
-      //.classed('hidden',true)
-      .html("Family 500 program put into law and implemented")
-        .style('left', (xz(startYear) +40) + 'px')
-        .style('top', (margin.top + 50) + 'px'); 
-
-      if (((xz(startYear))-110) > width) {
-        tooltip2.classed("hidden",true);
-      };
-      //lines.append("div")
-        //.classed("annotation", true)
-        //.style('left', 20 + 'px')
-        //.style('top', 20 + 'px')  
-        //.attr("x",xz(startYear) - 30 )
-        //.attr("y", 0)
-//        .attr("text-anchor", "left")
-        //.html("For the year ");
-        //.text("Family 500 implemented")
+      
         
       } 
     
-/*$(window).on('resize', function() {
-  containerwidth = parentNode.getBoundingClientRect().width,
-  containerheight = parentNode.getBoundingClientRect().height,
-  width = containerwidth - margin.left - margin.right,
-  height = containerheight - margin.top - margin.bottom;
-
-  x.range([0, width]);
-  y.range([height, 0]);
-  d3.select(parent + ' svg, ' + parent + ' svg g').attr('width', containerwidth).attr('height', containerheight);
-  xAxisGroup.call(xAxis);
-  yAxis.tickSizeInner(-width).tickSizeOuter(0);
-  yAxisGroup.call(yAxis);
-  d3.selectAll(parent + ' .d3-group').attr('d', function(d) { return line(d.values); }) ;
-  d3.selectAll(parent + ' .d3-focuspoint').attr("cx", xz(lastDate));
-  zoom 
-    .translateExtent([[0,0], [width, height]])
-    .extent([[0, 0], [width, height]])
-        
-  view
-    .attr("x", 0)
-    .attr("y", 0)
-    .attr("width", width)
-    .attr("height", height);
- 
-   svg.call(zoom.transform, d3.zoomIdentity);
-
-});   */ 

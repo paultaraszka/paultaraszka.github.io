@@ -5,61 +5,61 @@
 
 var data = [
   {
-     "name": "Total",
+     "name": "All Children",
      "date": "2008",
      "change": "0%",
      "value": 416437
   },
   {
-     "name": "Total",
+     "name": "All Children",
      "date": "2009",
      "change": "0.70%",
      "value": 419337
   },
   {
-     "name": "Total",
+     "name": "All Children",
      "date": "2010",
      "change": "-1.02%",
      "value": 415030
   },
   {
-     "name": "Total",
+     "name": "All Children",
      "date": "2011",
      "change": "-6.01%",
      "value": 390069
   },
   {
-     "name": "Total",
+     "name": "All Children",
      "date": "2012",
-     "change": "-5.67%",
+     "change": "-0.57%",
      "value": 387858
   },
   {
-     "name": "Total",
+     "name": "All Children",
      "date": "2013",
      "change": "-4.36%",
      "value": 370962
   },
   {
-     "name": "Total",
+     "name": "All Children",
      "date": "2014",
      "change": "1.49%",
      "value": 376501
   },
   {
-     "name": "Total",
+     "name": "All Children",
      "date": "2015",
      "change": "-1.91%",
      "value": 369308
   },
   {
-     "name": "Total",
+     "name": "All Children",
      "date": "2016",
      "change": "3.51%",
      "value": 382257
   },
   {
-     "name": "Total",
+     "name": "All Children",
      "date": "2017",
      "change": "5.16%",
      "value": 401982
@@ -391,7 +391,7 @@ var data = [
     data.forEach(function(d) {
       d.date = parseTime(d.date);
       d.value = +d.value;
-      //if (d.name === "Total" ? d.enabled = false : d.enabled = !d.enabled );
+      //if (d.name === "All Children" ? d.enabled = false : d.enabled = !d.enabled );
       //visible: (name === "Unemployment" ? true : false)
     });
 
@@ -409,11 +409,11 @@ var data = [
     dataGroup.forEach(function(d) {
       
       //console.log(d);
-      d.enabled = false;
-      if (d.key == "Total") {
-        d.enabled = true;
-      } 
-      //d.enabled = true;
+      //d.enabled = false;
+      //if (d.key == "All Children") {
+      //  d.enabled = true;
+      //} 
+      d.enabled = true;
     });               
     
 
@@ -462,7 +462,7 @@ var data = [
 
         lastDate = d.date;
         if (e.enabled) cys.push(d.value);
-        if (e.enabled) ds.push("<b>" + e.key + " child:</b> " + d.value + "&emsp;<b>Change:</b> " + d.change );
+        if (e.enabled) ds.push("<b>" + e.key + ":</b> " + d.value + "&emsp;<b>Change:</b> " + d.change );
       });
     
       var mouse = d3.mouse(svg.node()).map(function(d) {
@@ -693,7 +693,7 @@ var data = [
         .style("stroke-width", 1)
         .style("stroke", "#02A6E3")
         .style("stroke-dasharray","5,5")
-        .style("opacity", ".75")
+        .style("opacity", ".25")
         .style("fill", "none");
 
         lines.append("line")
@@ -706,7 +706,7 @@ var data = [
         //.style("lineDashType", "dash")
         .style("stroke", "#02A6E3")
         .style("stroke-dasharray","5,5")
-        .style("opacity", ".75")
+        .style("opacity", ".25")
         .style("fill", "none");
 
       //lines.append("text")
@@ -724,7 +724,7 @@ var data = [
       .classed('annotation', true)
       //.classed('d3-focuspoint',true)
       //.classed('hidden',true)
-      .html("Family 500 program details first announced")
+      .html("Family 500 announced")
         .style('left', (xz(announceYear) - 80) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
 
@@ -737,7 +737,7 @@ var data = [
       .classed('annotation', true)
       //.classed('d3-focuspoint',true)
       //.classed('hidden',true)
-      .html("Family 500 program put into law and implemented")
+      .html("Family 500 implemented")
         .style('left', (xz(startYear) +40) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
 
