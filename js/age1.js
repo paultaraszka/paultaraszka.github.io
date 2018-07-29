@@ -449,7 +449,7 @@ var color           =   d3.scaleOrdinal( d3.schemeCategory10 );
 
 var parent = '#chart';
 var legendStuff = ["Unmarried Rural","Unmarried Urban","Married Rural","Married Urban"];
-var ageGroups = ['15-19','20-24','25-29','30-34','35-39','40-44'];
+var ageGroups = ['Ages 15-19','Ages 20-24','Ages 25-29','Ages 30-34','Ages 35-39','Ages 40-44'];
 
 var data = data1[0];// paul
 
@@ -586,7 +586,7 @@ groups.selectAll( 'rect' )
         .style('top',y+"px")
         .style('display','block')
         .html("For the year <b>" + d.data["year"] + "</b>:<br/>"
-              + "\n<b>All Mothers:</b> " + (d.data["UnmarriedRural"]+d.data["UnmarriedUrban"]+ d.data["MarriedRural"]+d.data["MarriedUrban"])
+              + "\n<b>All Births:</b> " + (d.data["UnmarriedRural"]+d.data["UnmarriedUrban"]+ d.data["MarriedRural"]+d.data["MarriedUrban"])
               + "\n<b>Married Urban:</b> " + d.data["MarriedUrban"]
               + "\n<b>Married Rural:</b> " + d.data["MarriedRural"]
               + "\n<b>Unmarried Urban:</b> " + d.data["UnmarriedUrban"]
