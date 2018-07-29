@@ -466,9 +466,7 @@ var x_scale         =   d3.scaleBand()
     .range([0, chart_width])
     .paddingInner(0.05);
 var y_scale         =   d3.scaleLinear()
-    .domain([
-        0,
-        170000
+    .domain([0,210000
         //d3.max( data, function(d){return d.UnmarriedRural + d.UnmarriedUrban + d.MarriedRural + d.MarriedUrban;})
     ])
     .range([ chart_height-margin.bottom, 0 ]);
@@ -487,7 +485,7 @@ var y_scale         =   d3.scaleLinear()
 
     // text label for the y axis
     svg.append("text")
-    .attr("transform", "rotate(-90)")
+    .attr("transform", "rotate(-90,-25,-25)")
     .attr("y", 0 )
     .attr("x",0 - (chart_height / 2))
     .attr("dy", "1em")
@@ -636,6 +634,12 @@ groups.selectAll( 'rect' )
     .attr("fill", "black")
     .attr("transform","translate(0,20)");
 });
+
+d3.select( '#annotation')
+        .style('left',400+"px")
+        .style('top',200+"px")
+        .style('display','block')
+        .html("Stuff<br/>");
 
   // text label for the x axis
   //d3.select("#chart").append('svg')
