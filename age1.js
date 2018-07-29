@@ -438,15 +438,18 @@ margin = {
     top: 20,
     right: 160,
     bottom: 50,
-    left: 55
+    left: 55,
+    pad: 3
   };
 
 
-var chart_width     =   110;
+var chart_width     =   115;
 var chart_height    =   400;
 var color           =   d3.scaleOrdinal( d3.schemeCategory10 );
 
 var parent = '#chart';
+var legendStuff = ["Unmarried Rural","Unmarried Urban","Married Rural","Married Urban"];
+var ageGroups = ['15-19','20-24','25-29','30-34','35-39','40-44'];
 
 var data = data1[0];// paul
 
@@ -482,6 +485,19 @@ var y_scale         =   d3.scaleLinear()
 
     yAxisGroup.call(yAxis.scale(y_scale));
 
+    // text label for the y axis
+    svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 0 )
+    .attr("x",0 - (chart_height / 2))
+    .attr("dy", "1em")
+    .style("text-anchor", "middle")
+    .style("font-family","sans-serif")
+    .style("font-size","14px")
+    .text("Births");
+
+  
+
 // Stack Layout
 var stack           =   d3.stack().keys([
     'UnmarriedRural', 'UnmarriedUrban', 'MarriedRural', 'MarriedUrban'
@@ -491,8 +507,9 @@ var stack           =   d3.stack().keys([
 
 var stack_data ;//     =   stack(data);
 
-var svg, groups;
+var svg, groups, vertical;
 var yAxis, xAxis, yAxisGroup, xAxisGroup;
+
 
 
 /* Tooltip */  
@@ -502,16 +519,35 @@ var yAxis, xAxis, yAxisGroup, xAxisGroup;
 d3.select( '#tooltip')
 .classed("hidden",true);
 
+var legendItem = d3.select(".legend")  // Create legend (not needed inside redraw function, renders only once)
+      .selectAll("li")
+      .data(legendStuff)
+      .enter()
+      .append("li")
+    
+    legendItem
+      .append("span")
+      .attr("class", "color-square")
+      .style("background", function(d, i) {
+        return  color( i );     
+      });
+
+    legendItem
+      .append("span")
+      .text(function(d,i) {
+        return legendStuff[i];
+      });
+
 
 data1.forEach(function(d, i) { 
-    console.log(d + " " + i); 
+    //console.log(d + " " + i); 
 
-    data= d;
-    stack_data      =   stack(data);
+data= d;
+stack_data      =   stack(data);
 
 
 // Create SVG Element
- svg             =   d3.select("#chart")
+svg             =   d3.select("#chart")
     .append("svg")
     .attr("width", chart_width)
     .attr("height", chart_height);
@@ -550,16 +586,16 @@ groups.selectAll( 'rect' )
         .style('left',x+"px")
         .style('top',y+"px")
         .style('display','block')
-        .html("For the year <b>" + d.data["year"] + "</b>:<br/>" + 
-              "\n<b>All Mothers:</b> " + d[1] +
-              "\n<b>Unmarried Rural:</b> " + d.data["UnmarriedRural"] +
-              "\n<b>Unmarried Urban:</b> " + d.data["UnmarriedUrban"] +
-              "\n<b>Married Rural:</b> " + d.data["MarriedRural"] +
-              "\n<b>Married Urban:</b> " + d.data["MarriedUrban"] +
-              "<br/>");
+        .html("For the year <b>" + d.data["year"] + "</b>:<br/>"
+              + "\n<b>All Mothers:</b> " + (d.data["UnmarriedRural"]+d.data["UnmarriedUrban"]+ d.data["MarriedRural"]+d.data["MarriedUrban"])
+              + "\n<b>Married Urban:</b> " + d.data["MarriedUrban"]
+              + "\n<b>Married Rural:</b> " + d.data["MarriedRural"]
+              + "\n<b>Unmarried Urban:</b> " + d.data["UnmarriedUrban"]
+              + "\n<b>Unmarried Rural:</b> " + d.data["UnmarriedRural"]
+              + "<br/>");
         //.text(d["1"] + " total." );
         
-        console.log(d);
+        //console.log(d);
     })
     .on ('mouseout', function() {
         d3.select( '#tooltip')
@@ -570,13 +606,48 @@ groups.selectAll( 'rect' )
     xAxis = d3.axisBottom(x_scale).tickSizeInner(2).tickSizeOuter(0);
     //yAxis = d3.axisLeft(y_scale).ticks(5).tickSizeInner(-chart_width).tickSizeOuter(0);
     xAxisGroup = svg.append('g').attr('class', 'x d3-axis')
-        .attr('transform', 'translate(0,' + (chart_height-50) + ')');
+        .attr('transform', 'translate(0,' + (chart_height-margin.bottom) + ')');
     
-   
     xAxisGroup.call(xAxis.scale(year_scale)).selectAll("text").attr('transform', 'translate(15,0)rotate(-90,0,20)');
+
+    svg.append('line')
+    //.attr('class', 'd3-vertline')
+    .attr('y1', 0)
+    .attr('y2', chart_height-25)
+    .attr('x1', (chart_width))
+    .attr('x2', (chart_width))
+    .style("stroke-width", 2)
+    //.style("lineDashType", "dash")
+    //.style("stroke", "#02A6E3")
+    .style("stroke", "#000000")
+    //.style("stroke-dasharray","5,5")
+    //.style("opacity", ".75")
+    .style("fill", "none");
+    //.classed('hidden', 'true');
+
+    svg.append('text')
+    //.classed("annotation",true)
+    .attr('x',chart_width/2)
+    .attr('y',5)
+    .attr("text-anchor", 'middle')
+    .text(ageGroups[i])
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "14px")
+    .attr("fill", "black")
+    .attr("transform","translate(0,20)");
 });
 
-    //var ticks = d3.selectAll(".tick text");
+  // text label for the x axis
+  //d3.select("#chart").append('svg')
+  //.append("text")             
+  //.attr("transform",
+  //      "translate(" + (750/2) + " ," + 
+  //                     (0 ) + ")")
+  //.style("text-anchor", "middle")
+  //.style("z-index","1000")
+  //.text("Year");
+  
+  //var ticks = d3.selectAll(".tick text");
     //ticks.attr("class", function(d,i){
     //        if(i%2 != 0) d3.select(this).remove();
      //   });
