@@ -648,7 +648,7 @@ d3.select( '#annotation2')
     .style('left',500+"px")
     .style('top',100+"px")
     .style('display','block')
-    .html("Older women were more likely to hav children than younger women as they were generally in a better economic situation. The increase in births for older women was not enough to offset the decrease in younger age groups.");
+    .html("Older women were more likely to have children than younger women as they were generally in a better economic situation. The increase in births for older women was not enough to offset the decrease in younger age groups.");
 
   // text label for the x axis
   //d3.select("#chart").append('svg')
