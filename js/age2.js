@@ -660,7 +660,7 @@ d3.select( '#annotation2')
     .html("Older women continued having more children across all demographics, however the overall decrease in births to younger mothers vastly exceeded the births in these age groups.");
 
 
-    var years = ["Jump to Year","2012","2015","2016","2017"];
+    var years = ["Jump to Year","2012","2015","2016","2017","Explore"];
 
     var yearMenu = d3.select("#yearDropdownDiv");
 
@@ -686,6 +686,8 @@ function selectChange() {
     window.location.href = 'age3.html'
   } else if (selectValue === "2017") {
     window.location.href = 'age4.html'
+  } else if (selectValue === "Explore") {
+    window.location.href = 'age5.html'
   } 
 };
 

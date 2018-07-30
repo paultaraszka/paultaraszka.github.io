@@ -764,6 +764,37 @@ var data = [
         tooltip2.classed("hidden",true);
       };
 
+      var years = ["Jump to Year","2012","2015","2016","2017","Explore"];
+
+      var yearMenu = d3.select("#yearDropdownDiv");
+
+      //var select = d3.select('body')
+     var selecter =  d3.select("#dropdown")
+    .attr('class','select')
+      .on('change',selectChange);
+
+
+  var options = selecter
+    .selectAll('option')
+    .data(years).enter()
+    .append('option')
+      .text(function (d) { return d; });
+  
+  function selectChange() {
+    selectValue = d3.select('select').property('value');
+    if (selectValue === "2012") {
+      window.location.href = 'order1.html'
+    } else if (selectValue === "2015") {
+      window.location.href = 'order2.html'
+    } else if (selectValue === "2016") {
+      window.location.href = 'order3.html'
+    } else if (selectValue === "2017") {
+      window.location.href = 'order4.html'
+    } else if (selectValue === "Explore") {
+      window.location.href = 'order5.html'
+    } 
+  };
+
   }
     
 /*$(window).on('resize', function() {

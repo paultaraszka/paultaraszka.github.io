@@ -666,7 +666,7 @@ d3.select( '#annotation3')
         .style('display','block')
         .html("The middle age group saw the largest changes in their previous birth rates.");
 
-        var years = ["Jump to Year","2012","2015","2016","2017"];
+        var years = ["Jump to Year","2012","2015","2016","2017","Explore"];
 
         var yearMenu = d3.select("#yearDropdownDiv");
 
@@ -692,6 +692,8 @@ d3.select( '#annotation3')
         window.location.href = 'age3.html'
       } else if (selectValue === "2017") {
         window.location.href = 'age4.html'
+      } else if (selectValue === "Explore") {
+        window.location.href = 'age5.html'
       } 
     };
 
