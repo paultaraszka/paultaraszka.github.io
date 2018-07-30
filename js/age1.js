@@ -578,9 +578,14 @@ groups.selectAll( 'rect' )
     .attr("width", x_scale.bandwidth())
     .style("opacity", ".75")
     .on( 'mouseover', function( d ) {
-        var x = parseFloat( d3.select(this).attr('x')) + (x_scale.bandwidth() /2) + (chart_width*i) + 50;
-        var y = parseFloat( d3.select(this).attr('y')) + chart_height /2 - 100;
+      d3.select(this)
+      .attr("stroke-width",3)
+      .attr("stroke","#000");
 
+
+        var x = parseFloat( d3.select(this).attr('x')) + (x_scale.bandwidth() /2) + (chart_width*i) + 50;
+        var y = parseFloat( d3.select(this).attr('y')) + chart_height /2 - 180;
+      
         d3.select( '#tooltip')
         .style('left',x+"px")
         .style('top',y+"px")
@@ -597,7 +602,11 @@ groups.selectAll( 'rect' )
         //console.log(d);
     })
     .on ('mouseout', function() {
-        d3.select( '#tooltip')
+        
+      d3.select(this)
+      .attr("stroke-width",0)
+      
+      d3.select( '#tooltip')
         .style('display','none');
     });
 
