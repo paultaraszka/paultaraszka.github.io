@@ -760,7 +760,7 @@ var data = [
       .classed('annotation', true)
       //.classed('d3-focuspoint',true)
       //.classed('hidden',true)
-      .html("Family 500 program appears to have continued positive effect on birth rate after first full year.")
+      .html("Family 500 program appears to have continued positive effects on birth rate after first full year.")
         .style('left', (xz(markYear) - 80) + 'px')
         .style('top', (margin.top + 50) + 'px'); 
 

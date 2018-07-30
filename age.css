@@ -101,3 +101,8 @@ ul li {
     transform:translate(-50%,-50%);
     pointer-events:none;
     }
+    .d3-axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+        }

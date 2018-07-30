@@ -596,7 +596,7 @@ var data = [
     })
     //.classed('d3-focuspoint',true)
     //.classed('hidden',true)
-    .html("Now it's your tuen to explore the data.<br><br>- Click on the legend items to toggle lines on the chart<br>- Scroll  mousewheel to zoom.<br>- Click-drag to pan across data.<br><br>(Click to close this tooltip.)")
+    .html("Now it's your turn to explore the data.<br><br>- Click on the legend items to toggle lines on and off.<br>- Scroll  mousewheel to zoom.<br>- Click-drag to pan across data.<br><br>(Click to close this tooltip.)")
       .style('left', (xz(markYear) - 80) + 'px')
       .style('top', (margin.top + 200) + 'px')
       ; 
