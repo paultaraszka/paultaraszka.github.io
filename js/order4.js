@@ -443,7 +443,7 @@ var data = [
       .append('div')                                                              
       .attr('class', 'd3-tooltip hidden');
 
-    var tooltip1, tooltip2;
+    var tooltip1, tooltip2, tooltip3, tooltip4;
    
    
     var mousemoveFunc = function(d, i) {
@@ -727,6 +727,33 @@ var data = [
 
 
       
+        lines.append("line")
+        .attr("id", "start")
+        .attr("x1", xz(startYear))  //<<== change your code here
+        .attr("y1", yz(401982)+50)
+        .attr("x2", xz(markYear)-20)  //<<== and here
+        .attr("y2", yz(401982)+5)
+        .style("stroke-width", 1)
+        //.style("lineDashType", "dash")
+        .style("stroke", "#02A6E3")
+        .style("stroke-dasharray","5,5")
+        .style("opacity", ".25")
+        .style("fill", "none");
+
+
+        lines.append("line")
+        .attr("id", "start")
+        .attr("x1", xz(startYear))  //<<== change your code here
+        .attr("y1", yz(172642)-50)
+        .attr("x2", xz(markYear)-20)  //<<== and here
+        .attr("y2", yz(172642)-5)
+        .style("stroke-width", 1)
+        //.style("lineDashType", "dash")
+        .style("stroke", "#02A6E3")
+        .style("stroke-dasharray","5,5")
+        .style("opacity", ".25")
+        .style("fill", "none");
+
 
       tooltip1 = d3.select(parent)
       .append('div')                                                              
@@ -746,13 +773,42 @@ var data = [
       .classed('annotation', true)
       //.classed('d3-focuspoint',true)
       //.classed('hidden',true)
-      .html("2nd and 3rd children see great increases.")
+      .html("2nd and 3rd children see large increases.")
         .style('left', (xz(markYear2  ) +40) + 'px')
         .style('top', (height*.95) + 'px'); 
 
       if (((xz(markYear2))-110) > width) {
         tooltip2.classed("hidden",true);
       };
+
+
+      tooltip3 = d3.select(parent)
+      .append('div')                                                            
+      .classed('annotation', true)
+      //.classed('d3-focuspoint',true)
+      //.classed('hidden',true)
+      .html("Large overall increase in birth rate.")
+        .style('left', (xz(markYear2  ) +40) + 'px')
+        .style('top', (height*.5) + 'px'); 
+
+      if (((xz(markYear2))-110) > width) {
+        tooltip2.classed("hidden",true);
+      };
+
+
+      tooltip4 = d3.select(parent)
+      .append('div')                                                            
+      .classed('annotation', true)
+      //.classed('d3-focuspoint',true)
+      //.classed('hidden',true)
+      .html("1st children see slight decrease.")
+        .style('left', (xz(markYear2  ) +40) + 'px')
+        .style('top', (height*.65) + 'px'); 
+
+      if (((xz(markYear2))-110) > width) {
+        tooltip2.classed("hidden",true);
+      };
+
       //lines.append("div")
         //.classed("annotation", true)
         //.style('left', 20 + 'px')

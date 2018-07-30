@@ -581,6 +581,41 @@ var data = [
 
     redraw();
 
+
+    var markYear = new Date(2012,0,1,0,0,0);
+    //var startYear = new Date(2016,0,1,0,0,0);
+
+    tooltip1 = d3.select(parent)
+    .append('div')                                                              
+    .classed('annotation2', true)
+    .attr("id","tooltip")
+    .on('click', function(d) {
+      tooltip1.classed("hidden",true)  // Javascript toggle
+      //svg.call(zoom.transform, d3.zoomIdentity);  // reset to zoomidentity
+      
+    })
+    //.classed('d3-focuspoint',true)
+    //.classed('hidden',true)
+    .html("Now it's your tuen to explore the data.<br><br>- Click on the legend items to toggle lines on the chart<br>- Scroll  mousewheel to zoom.<br>- Click-drag to pan across data.<br><br>(Click to close this tooltip.)")
+      .style('left', (xz(markYear) - 80) + 'px')
+      .style('top', (margin.top + 200) + 'px')
+      ; 
+
+    if (((xz(markYear))-110) > width) {
+      tooltip1.classed("hidden",true);
+    };
+
+    function equalToEventTarget() {
+      return this == d3.event.target;
+  }
+  
+  d3.select("body").on("click",function(){
+      var outside = tooltip1.filter(equalToEventTarget).empty();
+      if (outside) {
+          tooltip1.classed("hidden", true);
+      }
+  });
+
     function redraw() {
     
       tooltip.classed('hidden', true);
@@ -682,10 +717,9 @@ var data = [
         });
 
 
-        /*
-      var announceYear = new Date(2015,0,1,0,0,0);
-      var startYear = new Date(2016,0,1,0,0,0);
-
+        
+      
+/*
       lines.append("line")
         .attr("id", "announce")
         .attr("x1", xz(announceYear))  //<<== change your code here
@@ -722,19 +756,6 @@ var data = [
 
       
 /*
-      tooltip1 = d3.select(parent)
-      .append('div')                                                              
-      .classed('annotation', true)
-      //.classed('d3-focuspoint',true)
-      //.classed('hidden',true)
-      .html("Family 500 announced")
-        .style('left', (xz(announceYear) - 80) + 'px')
-        .style('top', (margin.top + 50) + 'px'); 
-
-      if (((xz(announceYear))-110) > width) {
-        tooltip1.classed("hidden",true);
-      };
-
       
       tooltip2 = d3.select(parent)
       .append('div')                                                            

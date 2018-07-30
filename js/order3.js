@@ -407,7 +407,7 @@ var data = [
       .append('div')                                                              
       .attr('class', 'd3-tooltip hidden');
 
-    var tooltip1, tooltip2;
+    var tooltip1, tooltip2, tooltip3;
    
    
     var mousemoveFunc = function(d, i) {
@@ -647,6 +647,7 @@ var data = [
       var announceYear = new Date(2015,0,1,0,0,0);
       var startYear = new Date(2016,0,1,0,0,0);
       var markYear = new Date(2015,0,1,0,0,0);
+      var markYear2 = new Date(2013,0,1,0,0,0);
 
       lines.append("line")
         .attr("id", "announce")
@@ -700,6 +701,19 @@ var data = [
         .style("opacity", ".25")
         .style("fill", "none");
 
+        lines.append("line")
+        .attr("id", "start")
+        .attr("x1", xz(markYear))  //<<== change your code here
+        .attr("y1", yz(382257)+50)
+        .attr("x2", xz(startYear)-20)  //<<== and here
+        .attr("y2", yz(382257)+5)
+        .style("stroke-width", 1)
+        //.style("lineDashType", "dash")
+        .style("stroke", "#02A6E3")
+        .style("stroke-dasharray","5,5")
+        .style("opacity", ".25")
+        .style("fill", "none");
+
       //lines.append("text")
       //  .classed("annotation", true)
       // .attr("x",xz(announceYear) - 110 )
@@ -728,7 +742,7 @@ var data = [
       .classed('annotation', true)
       //.classed('d3-focuspoint',true)
       //.classed('hidden',true)
-      .html("2nd, 3rd, and 4th children see small increases.")
+      .html("1st, 2nd, and 3rd children see increases in births.")
         .style('left', (xz(markYear)-100 ) + 'px')
         .style('top', (height*.95) + 'px'); 
 
@@ -736,6 +750,20 @@ var data = [
         tooltip2.classed("hidden",true);
         
       } ;
+
+      tooltip3 = d3.select(parent)
+      .append('div')                                                            
+      .classed('annotation', true)
+      //.classed('d3-focuspoint',true)
+      //.classed('hidden',true)
+      .html("Notable overall increase in birth rate.")
+        .style('left', (xz(markYear2  ) +40) + 'px')
+        .style('top', (height*.5) + 'px'); 
+
+      if (((xz(markYear2))-110) > width) {
+        tooltip2.classed("hidden",true);
+      };
+
   }
     
 /*$(window).on('resize', function() {
