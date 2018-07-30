@@ -37,38 +37,38 @@ var data1 = [
       },
       {
         "year": "2013",
-        "UnmarriedRural": 5180,
-        "UnmarriedUrban": 14682,
-        "MarriedRural": 1783,
-        "MarriedUrban": 948
+        "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
       },
       {
         "year": "2014",
-        "UnmarriedRural": 5108,
-        "UnmarriedUrban": 15032,
-        "MarriedRural": 1398,
-        "MarriedUrban": 763
+        "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
       },
       {
         "year": "2015",
-        "UnmarriedRural": 4430,
-        "UnmarriedUrban": 14729,
-        "MarriedRural": 1275,
-        "MarriedUrban": 749
+        "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
       },
       {
         "year": "2016",
-        "UnmarriedRural": 4216,
-        "UnmarriedUrban": 15676,
-        "MarriedRural": 1075,
-        "MarriedUrban": 618
+        "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
       },
       {
         "year": "2017",
-        "UnmarriedRural": 3690,
-        "UnmarriedUrban": 15732,
-        "MarriedRural": 1090,
-        "MarriedUrban": 635
+        "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
       }
     ],
     [//20-24
@@ -109,38 +109,38 @@ var data1 = [
           },
           {
             "year": "2013",
-            "UnmarriedRural": 11363,
-            "UnmarriedUrban": 14628,
-            "MarriedRural": 22454,
-            "MarriedUrban": 14713
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2014",
-            "UnmarriedRural": 12030,
-            "UnmarriedUrban": 15032,
-            "MarriedRural": 20248,
-            "MarriedUrban": 12975
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2015",
-            "UnmarriedRural": 11246,
-            "UnmarriedUrban": 14729,
-            "MarriedRural": 18540,
-            "MarriedUrban": 12622
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2016",
-            "UnmarriedRural": 11446,
-            "UnmarriedUrban": 15676,
-            "MarriedRural": 17089,
-            "MarriedUrban": 11559
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2017",
-            "UnmarriedRural": 10716,
-            "UnmarriedUrban": 15732,
-            "MarriedRural": 17545,
-            "MarriedUrban": 11935
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }  
     ],
     [//25-29
@@ -181,38 +181,38 @@ var data1 = [
           },
           {
             "year": "2013",
-            "UnmarriedRural": 7690,
-            "UnmarriedUrban": 14653,
-            "MarriedRural": 49036,
-            "MarriedUrban": 59994
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2014",
-            "UnmarriedRural": 8187,
-            "UnmarriedUrban": 15327,
-            "MarriedRural": 48393,
-            "MarriedUrban": 57711
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2015",
-            "UnmarriedRural": 8201,
-            "UnmarriedUrban": 15428,
-            "MarriedRural": 45741,
-            "MarriedUrban": 54624
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2016",
-            "UnmarriedRural": 8466,
-            "UnmarriedUrban": 16832,
-            "MarriedRural": 46589,
-            "MarriedUrban": 54764
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2017",
-            "UnmarriedRural": 8718,
-            "UnmarriedUrban": 17267,
-            "MarriedRural": 49856,
-            "MarriedUrban": 56623
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }  
     ],
     [//30-34
@@ -253,38 +253,38 @@ var data1 = [
           },
           {
             "year": "2013",
-            "UnmarriedRural": 4639,
-            "UnmarriedUrban": 11887,
-            "MarriedRural": 35166,
-            "MarriedUrban": 58533
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2014",
-            "UnmarriedRural": 4958,
-            "UnmarriedUrban": 13135,
-            "MarriedRural": 37523,
-            "MarriedUrban": 61781
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2015",
-            "UnmarriedRural": 5241,
-            "UnmarriedUrban": 14087,
-            "MarriedRural": 36886,
-            "MarriedUrban": 62926
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2016",
-            "UnmarriedRural": 5540,
-            "UnmarriedUrban": 15148,
-            "MarriedRural": 39487,
-            "MarriedUrban": 66019
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2017",
-            "UnmarriedRural": 5986,
-            "UnmarriedUrban": 16094,
-            "MarriedRural": 43556,
-            "MarriedUrban": 69258
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           } 
     ],
     [//35-39
@@ -325,38 +325,38 @@ var data1 = [
           },
           {
             "year": "2013",
-            "UnmarriedRural": 2226,
-            "UnmarriedUrban": 6156,
-            "MarriedRural": 13504,
-            "MarriedUrban": 21668
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2014",
-            "UnmarriedRural": 2405,
-            "UnmarriedUrban": 6842,
-            "MarriedRural": 14367,
-            "MarriedUrban": 23499
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2015",
-            "UnmarriedRural": 2521,
-            "UnmarriedUrban": 7138,
-            "MarriedRural": 14346,
-            "MarriedUrban": 23967
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2016",
-            "UnmarriedRural": 2556,
-            "UnmarriedUrban": 7735,
-            "MarriedRural": 15820,
-            "MarriedUrban": 26205
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2017",
-            "UnmarriedRural": 2870,
-            "UnmarriedUrban": 8414,
-            "MarriedRural": 17716,
-            "MarriedUrban": 28563
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }
     ],
     [//40-44
@@ -397,38 +397,38 @@ var data1 = [
           },
           {
             "year": "2013",
-            "UnmarriedRural": 491,
-            "UnmarriedUrban": 1266,
-            "MarriedRural": 2764,
-            "MarriedUrban": 3276
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2014",
-            "UnmarriedRural": 527,
-            "UnmarriedUrban": 1455,
-            "MarriedRural": 2709,
-            "MarriedUrban": 3687
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2015",
-            "UnmarriedRural": 549,
-            "UnmarriedUrban": 1540,
-            "MarriedRural": 2802,
-            "MarriedUrban": 3834
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2016",
-            "UnmarriedRural": 628,
-            "UnmarriedUrban": 1810,
-            "MarriedRural": 2910,
-            "MarriedUrban": 4310
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2017",
-            "UnmarriedRural": 689,
-            "UnmarriedUrban": 1924,
-            "MarriedRural": 3202,
-            "MarriedUrban": 4826
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }  
     ]
 ]
@@ -636,11 +636,19 @@ groups.selectAll( 'rect' )
     .attr("transform","translate(0,20)");
 });
 
-d3.select( '#annotation')
-        .style('left',400+"px")
-        .style('top',200+"px")
-        .style('display','block')
-        .html("Stuff<br/>");
+d3.select( '#annotation1')
+.classed("annotation",true)
+    .style('left',100+"px")
+    .style('top',100+"px")
+    .style('display','block')
+    .html("Poland's government found it was not economically viable for younger women to have children. This mirrors the decreasing number of births to younger mothers.");
+
+d3.select( '#annotation2')
+.classed("annotation",true)
+    .style('left',500+"px")
+    .style('top',100+"px")
+    .style('display','block')
+    .html("Older women were more likely to hav children than younger women as they were generally in a better economic situation. The increase in births for older women was not enough to offset the decrease in younger age groups.");
 
   // text label for the x axis
   //d3.select("#chart").append('svg')

@@ -65,10 +65,10 @@ var data1 = [
       },
       {
         "year": "2017",
-        "UnmarriedRural": 3690,
-        "UnmarriedUrban": 15732,
-        "MarriedRural": 1090,
-        "MarriedUrban": 635
+        "UnmarriedRural": 0,
+        "UnmarriedUrban": 0,
+        "MarriedRural": 0,
+        "MarriedUrban": 0
       }
     ],
     [//20-24
@@ -137,10 +137,10 @@ var data1 = [
           },
           {
             "year": "2017",
-            "UnmarriedRural": 10716,
-            "UnmarriedUrban": 15732,
-            "MarriedRural": 17545,
-            "MarriedUrban": 11935
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }  
     ],
     [//25-29
@@ -209,10 +209,10 @@ var data1 = [
           },
           {
             "year": "2017",
-            "UnmarriedRural": 8718,
-            "UnmarriedUrban": 17267,
-            "MarriedRural": 49856,
-            "MarriedUrban": 56623
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }  
     ],
     [//30-34
@@ -281,10 +281,10 @@ var data1 = [
           },
           {
             "year": "2017",
-            "UnmarriedRural": 5986,
-            "UnmarriedUrban": 16094,
-            "MarriedRural": 43556,
-            "MarriedUrban": 69258
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           } 
     ],
     [//35-39
@@ -353,10 +353,10 @@ var data1 = [
           },
           {
             "year": "2017",
-            "UnmarriedRural": 2870,
-            "UnmarriedUrban": 8414,
-            "MarriedRural": 17716,
-            "MarriedUrban": 28563
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }
     ],
     [//40-44
@@ -425,10 +425,10 @@ var data1 = [
           },
           {
             "year": "2017",
-            "UnmarriedRural": 689,
-            "UnmarriedUrban": 1924,
-            "MarriedRural": 3202,
-            "MarriedUrban": 4826
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }  
     ]
 ]
@@ -636,11 +636,26 @@ groups.selectAll( 'rect' )
     .attr("transform","translate(0,20)");
 });
 
-d3.select( '#annotation')
-        .style('left',400+"px")
-        .style('top',200+"px")
+d3.select( '#annotation1')
+.classed("annotation",true)
+    .style('left',100+"px")
+    .style('top',100+"px")
+    .style('display','block')
+    .html("The promise of financial incentives resonated with younger mothers.  The rate of decline in births has slowed.  Starting this yer, the Family 500+ program is officially law.");
+
+d3.select( '#annotation2')
+.classed("annotation",true)
+    .style('left',550+"px")
+    .style('top',100+"px")
+    .style('display','block')
+    .html("The promise of financial incentives resonated with older mothers as well.  The number of children to these age groups increased by a notable amount.  It was expected that these age groups would provide many more children now that  Family 500+ is officially law.");
+    
+d3.select( '#annotation3')
+    .classed("annotation",true)
+        .style('left',325+"px")
+        .style('top',100+"px")
         .style('display','block')
-        .html("Stuff<br/>");
+        .html("The middle age group saw the largest changes in their previous birth rates.");
 
   // text label for the x axis
   //d3.select("#chart").append('svg')

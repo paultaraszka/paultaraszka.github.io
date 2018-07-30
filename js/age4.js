@@ -636,11 +636,26 @@ groups.selectAll( 'rect' )
     .attr("transform","translate(0,20)");
 });
 
-d3.select( '#annotation')
-        .style('left',400+"px")
-        .style('top',200+"px")
+d3.select( '#annotation1')
+.classed("annotation",true)
+    .style('left',100+"px")
+    .style('top',100+"px")
+    .style('display','block')
+    .html("After the first full year of the official Family 500+ program, the youngest age group of mothers had changed their trend of decreasing births to having flat growth.  It is expected that next year will see a poitive increase.");
+
+d3.select( '#annotation2')
+.classed("annotation",true)
+    .style('left',550+"px")
+    .style('top',100+"px")
+    .style('display','block')
+    .html("Older age groups continue to increase the number of children they are having.  Though they were increasing before the Family 500+ program, the rate of births has increased for these groups.");
+    
+d3.select( '#annotation3')
+    .classed("annotation",true)
+        .style('left',325+"px")
+        .style('top',100+"px")
         .style('display','block')
-        .html("Stuff<br/>");
+        .html("The impact is greatest on the middle age groups.  They have had significantly more children this year.");
 
   // text label for the x axis
   //d3.select("#chart").append('svg')

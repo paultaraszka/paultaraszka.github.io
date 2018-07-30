@@ -58,17 +58,17 @@ var data1 = [
       },
       {
         "year": "2016",
-        "UnmarriedRural": 4216,
-        "UnmarriedUrban": 15676,
-        "MarriedRural": 1075,
-        "MarriedUrban": 618
+        "UnmarriedRural": 0,
+        "UnmarriedUrban": 0,
+        "MarriedRural": 0,
+        "MarriedUrban": 0
       },
       {
         "year": "2017",
-        "UnmarriedRural": 3690,
-        "UnmarriedUrban": 15732,
-        "MarriedRural": 1090,
-        "MarriedUrban": 635
+        "UnmarriedRural": 0,
+        "UnmarriedUrban": 0,
+        "MarriedRural": 0,
+        "MarriedUrban": 0
       }
     ],
     [//20-24
@@ -130,17 +130,17 @@ var data1 = [
           },
           {
             "year": "2016",
-            "UnmarriedRural": 11446,
-            "UnmarriedUrban": 15676,
-            "MarriedRural": 17089,
-            "MarriedUrban": 11559
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2017",
-            "UnmarriedRural": 10716,
-            "UnmarriedUrban": 15732,
-            "MarriedRural": 17545,
-            "MarriedUrban": 11935
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }  
     ],
     [//25-29
@@ -202,17 +202,17 @@ var data1 = [
           },
           {
             "year": "2016",
-            "UnmarriedRural": 8466,
-            "UnmarriedUrban": 16832,
-            "MarriedRural": 46589,
-            "MarriedUrban": 54764
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2017",
-            "UnmarriedRural": 8718,
-            "UnmarriedUrban": 17267,
-            "MarriedRural": 49856,
-            "MarriedUrban": 56623
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }  
     ],
     [//30-34
@@ -274,17 +274,17 @@ var data1 = [
           },
           {
             "year": "2016",
-            "UnmarriedRural": 5540,
-            "UnmarriedUrban": 15148,
-            "MarriedRural": 39487,
-            "MarriedUrban": 66019
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2017",
-            "UnmarriedRural": 5986,
-            "UnmarriedUrban": 16094,
-            "MarriedRural": 43556,
-            "MarriedUrban": 69258
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           } 
     ],
     [//35-39
@@ -346,17 +346,17 @@ var data1 = [
           },
           {
             "year": "2016",
-            "UnmarriedRural": 2556,
-            "UnmarriedUrban": 7735,
-            "MarriedRural": 15820,
-            "MarriedUrban": 26205
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2017",
-            "UnmarriedRural": 2870,
-            "UnmarriedUrban": 8414,
-            "MarriedRural": 17716,
-            "MarriedUrban": 28563
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }
     ],
     [//40-44
@@ -418,17 +418,17 @@ var data1 = [
           },
           {
             "year": "2016",
-            "UnmarriedRural": 628,
-            "UnmarriedUrban": 1810,
-            "MarriedRural": 2910,
-            "MarriedUrban": 4310
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           },
           {
             "year": "2017",
-            "UnmarriedRural": 689,
-            "UnmarriedUrban": 1924,
-            "MarriedRural": 3202,
-            "MarriedUrban": 4826
+            "UnmarriedRural": 0,
+            "UnmarriedUrban": 0,
+            "MarriedRural": 0,
+            "MarriedUrban": 0
           }  
     ]
 ]
@@ -636,11 +636,20 @@ groups.selectAll( 'rect' )
     .attr("transform","translate(0,20)");
 });
 
-d3.select( '#annotation')
-        .style('left',400+"px")
-        .style('top',200+"px")
-        .style('display','block')
-        .html("Stuff<br/>");
+d3.select( '#annotation1')
+.classed("annotation",true)
+    .style('left',100+"px")
+    .style('top',100+"px")
+    .style('display','block')
+    .html("Births to younger mothers had continued to decline.  While unmarried women had a fairly steady number of children, the much more significant number of married mothers had many less children. Finacnial incentives would be announced this year.");
+
+d3.select( '#annotation2')
+.classed("annotation",true)
+    .style('left',500+"px")
+    .style('top',100+"px")
+    .style('display','block')
+    .html("Older women continued having more children across all demographics, however the overall decrease in births to younger mothers vastly exceeded the births in these age groups.");
+
 
   // text label for the x axis
   //d3.select("#chart").append('svg')
