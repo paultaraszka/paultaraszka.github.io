@@ -41,9 +41,9 @@ button {
     transform:translate(-50%,-50%);
     pointer-events:none;
     }
-.hidden {
-    display:none;
-}
+    .hidden {
+        display:none;
+        }
 #tooltip1 {
     position: absolute;
     width: 75px;

@@ -636,11 +636,38 @@ groups.selectAll( 'rect' )
     .attr("transform","translate(0,20)");
 });
 
-d3.select( '#annotation')
-        .style('left',400+"px")
-        .style('top',200+"px")
-        .style('display','block')
-        .html("Stuff<br/>");
+var tooltip1 ;
+
+
+        tooltip1 = d3.select(parent)
+        .append('div')                                                              
+        .classed('annotation', true)
+        //.attr("id","annotation")
+        .on('click', function(d) {
+          tooltip1.classed("hidden",true)  // Javascript toggle
+          //svg.call(zoom.transform, d3.zoomIdentity);  // reset to zoomidentity
+          
+        })
+        //.classed('d3-focuspoint',true)
+        //.classed('hidden',true)
+        .html("Now it's your turn to explore the data.<br><br>Hover over the bars and explore the birth data without any annotations on the chart.<br><br>(Click to close this tooltip.)")
+          .style('left',  300 + 'px')
+          .style('top',150 + 'px')
+          ; 
+
+        function equalToEventTarget() {
+          return this == d3.event.target;
+      }
+      
+      d3.select("body").on("click",function(){
+          var outside = tooltip1.filter(equalToEventTarget).empty();
+          if (outside) {
+              tooltip1.classed("hidden", true);
+          }
+      });
+
+      
+ 
 
   // text label for the x axis
   //d3.select("#chart").append('svg')
